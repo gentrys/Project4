@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+     <style type="text/css">
+      html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAomFEWkiPDzBKl0V9n7fRqNG0UZsD28mI">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: { lat: 39, lng: -96},
+          zoom: 4
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+    
+        var image = 'images/marker.png';
+        
+        var image1 = 'images/marker-red.png';
+        
+        var marker = new google.maps.Marker({
+            position: { lat: 41.86232002142857, lng: -87.61669903993606 },
+            map: map,
+            title: 'Soldier Field - Chicago',
+            icon: image
+        })
+        
+        var infowindow1 = new google.maps.InfoWindow({
+            content: "Soldier Field <br> Home of the Chicago Bears <br> <img src='http://www.stadiumsofprofootball.com/superbowl/proplayer.jpg' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker, 'click', function(){
+            infowindow1.open(map,marker);
+        });
+        
+        
+        var marker1 = new google.maps.Marker({
+            position: { lat: 33.757614, lng: -84.400972},
+            map: map,
+            title: 'Georgia Dome - Atlanta',
+            icon: image
+        })
+        
+        var infowindow1 = new google.maps.InfoWindow({
+            content: "Georgia Dome <br> Home of the Atlanta Falcons <br> <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZEN_2QxHlI0ZjE6qRlxtRKX4_-2PssfMOvLQOtYvAUeAbH5Z6' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker1, 'click', function(){
+            infowindow1.open(map,marker1);
+        });
+        
+        
+        var marker2 = new google.maps.Marker({
+            position: { lat: 39.27798508915832, lng: -76.62278831005096},
+            map: map,
+            title: 'M&T Bank Stadium - Baltimore',
+            icon: image1
+        })
+        
+         var infowindow1 = new google.maps.InfoWindow({
+            content: "M&T Bank Stadium <br> Home of the Baltimore Ravens <br> <img src='http://dmvsthemove.com/wp-content/uploads/2014/04/Legends-of-the-Summer2.jpg' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker2, 'click', function(){
+            infowindow1.open(map,marker2);
+        });
+        
+        
+        var marker3 = new google.maps.Marker({
+            position: { lat: 39.90077153490717, lng: -75.16746997833252 },
+            map: map,
+            title: 'Lincoln Financial Field - Philly',
+            icon: image
+        })
+        
+        var infowindow3 = new google.maps.InfoWindow({
+            content: "Lincoln Financial Field <br> Home of the Philidelphia Eagles <br> <img src='http://www.turnerconstruction.com/Files/ProjectImage?url=%2Fsites%2Fmarketingstories%2FMarketing%2520Story%2520Images%2Foriginal.933c9824-6037-48ae-abdb-d0d15ea84adc.jpg&width=707&height=470&crop=True&jpegQuality=95' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker3, 'click', function(){
+            infowindow3.open(map,marker3);
+        });
+        
+        
+        var marker4 = new google.maps.Marker({
+            position: { lat: 40.446751106051884, lng: -80.01570761203766},
+            map: map,
+            title: 'Heinz Field - Pitt',
+            icon: image1
+        })
+        
+        var infowindow4 = new google.maps.InfoWindow({
+            content: "Heinz Field <br> Home of the Pittsburgh Steelers <br> <img src='http://az100346.vo.msecnd.net/content/images/rockandbus/venues/heinzfield/primary.jpg' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker4, 'click', function(){
+            infowindow4.open(map,marker4);
+        });
+        
+        
+        var marker5 = new google.maps.Marker({
+            position: { lat: 38.632975, lng: -90.188547 },
+            map: map,
+            title: 'Edward Jones Dome - St. louis',
+            icon: image
+        })
+        
+        var infowindow5 = new google.maps.InfoWindow({
+            content: "Edward Jones Dome <br> Home of the St. Louis Rams <br> <img src='http://prod.static.rams.clubs.nfl.com//assets/images/imported/STL/photos/centerpiece-landing-470x335/edward-jones-dome/edward-jones-dome2.jpg' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker5, 'click', function(){
+            infowindow5.open(map,marker5);
+        });
+        
+        
+        var marker6 = new google.maps.Marker({
+            position: { lat: 39.04900221390707, lng: -94.48386490345001},
+            map: map,
+            title: 'Arrowhead Stadium - KC',
+            icon: image1
+        })
+        
+        var infowindow6 = new google.maps.InfoWindow({
+            content: "Arrowhead Stadium <br> Home of the Kansas City Chiefs <br> <img src='http://football.ballparks.com/NFL/KansasCityChiefs/aerial.jpg' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker6, 'click', function(){
+            infowindow6.open(map,marker6);
+        });
+        
+        
+        var marker7 = new google.maps.Marker({
+            position: { lat: 25.957740809581857, lng: -80.23878157138824 },
+            map: map,
+            title: 'Sunlife Stadium - Miami',
+            icon: image1
+        })
+        
+        var infowindow7 = new google.maps.InfoWindow({
+            content: "Sunlife Stadium <br> Home of the Miami Dolphins <br> <img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxQTEhUTExQWFRUXGSAYGRgXGB4dIRogGhgbGx0ZGxggHighHRomHhobITEiJS0rLi4uGh8zODMsNygvLisBCgoKDg0OGxAQGzQmHyQsLCw0NCw3NCwsLywsLCwvLCwvLywsLCwsNCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLP/AABEIAKYBLwMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAEBQIDBgABB//EAEoQAAECBQIEAwQHBQQJAgcAAAECEQADEiExBEEFIlFhE3GRBjKBoSNCUrHB0fAUM2Jy4RWCkvEWQ1NUk7LC0uIkYwcXg4Sio9P/xAAZAQADAQEBAAAAAAAAAAAAAAAAAQIDBAX/xAA2EQACAgEDAgIHBQgDAAAAAAAAAQIRIQMSMQRRQfAFE2GRocHRFCJxgbEVMkJS0uHi8SNDkv/aAAwDAQACEQMRAD8AzxlImIdIEtVyAocp/vbh8xaha0mlQUQA+AX35SVsBtbGWjzVcKINnWHcpKtuiSOuMx2mTNUSkoC5Yyk0Brbl2GN/xYSU6PZOlTNQVBCkAne4LHI8sdHgjUIMtKBLLk4QEm3UqWbD5djFWoQ5PhKSs1VGXMUrZrBLgU/BrmBZ3GJqlq8QJcD3Cm3awvYD59oYhtMVdMydQokBkrW4HdIJDEtlvnAk/WkJIVLc7Jcl7mwLAYvucY2ElyEqUFSlATM0LZgeoBBuOnliDkIJZJArOUqU1hlQYb+fpCAoXIStCVcgJ90L5gGJDJuxv0cRWdUtCaZqbY3VVj4Df8oYL0A8EpQpBUogmXyKYJ2KwkqTvhWfmFPdBQmoEEMZaktTbDhyfNm7GDAZKZspKgkBSZZF6WcG7sFMx+cHzdQEkJUhSbByWKXYuyiXJdgAw3vFcjTIWtPgzDLWB7oB6GyXZjcwZJdClIUmYpLAFcxSSCS9wln6C1/xVjoX0JLrQopfZZce8WJD+ebXe8W6nVqSkKmJSrohCSx3uoYfFjBfE+HiYA61DcIWogE4c79r3aFupmTNPYIKgwAJNu7JBLB8AvtBY9rCpnEZZelH7O4ahRUXJ+yopcC+4Oc9JTkqlhgFTS9gpgokNhnAHcmKZdJKnVQq6iA4rIB5anf4WzF0rRTZSiUhCUquWUCjG9RfA2D9HMFoVMvA8KWHSJZ98pUErUM3cg3Y2d2xZrHeyQm6meUzFDw0ormAIQHK/cS9L+6avgYUaxSVE+Kuk0pHLUxBNJZzYAMRYO4tG49gpCZenMxSk1zlGYQ4sMJHk1x/NGka2nPqKXrYrwqyc6TokqpKkhSQS3LZg+G6YGTtFXtNJlyNKqakuVAJRZJcqxYpuwdTdoYcO4dLdU1YT4ilKuSCaXFAspgyEpHX3sPGV/8AiHxVJnIkoIaQjxCB9tTJljzFlN0JgjFWGvNxg2hOiYmatVc8hSeVIaWgKsx5gjBOPNt4KWV+EErkS1kGylPMe+wuVK6Af5KpUuWr6FQUKVNWHZgkFT0lyyqyP5todyiuhPhrStAsAEt/iTZh5fnEz5NNFN6abFqFFMzlmrCyHoclKQ3uqSBSm31dh0vEtFKCVIUSpCnutHLS6utVx2DWfvHiJsorApSVEl6JamtuXptZ7fHeLNVJmJZSPpgxYJVYAZAQ7bjvEujSn2GQmFEtcysz0u10ly5AYAso3e4Ub5BgDSe1Y8QJlvJNTUqZSD0KgQm4N7sBZ8PAk/VIsCFKUk+6Pq4tY09A6SDZ7ZgLXaJU4hSFpVh0mxSnoBn4kl/vlKgybKbrVlRVOIA2ALmxuckv1zFE/XICAtP0j3AQQ7YJ5iPzjNzELk/Ry5qbAGizAnLKNqruQPwtZwTXqVz+GAEEcyUhTvZmz3Kne0VSFb7Dsa+YD+6KgQ6aFpLucFgUhQ6dsxYNNMmpCjXUzUmkJdyzsCXbazwT4c5B8WsFCA5pcFimxWghwHciw8yIE4hPTMlVzCSkkGpKEharcrqTkNZ2G2Ie0SkWaXRKBNCjXcgpdg/1ScH5dYXzuKpnfQahM0qdiFpYj4hRSdt75jtLNqdcsoLixdairaqkBixyCxsesTlaAljOVMA/gplhLXcByFP3AI6QqRX4C3W+z+nKPo5oSp2dZLXONvS0KeJcDVpyASpSCzlKS3w6lodTdIAkrmT5kyXUzykmxtYqBaohsi+0MtHxuUAoFKzdmBqJYANTaktdgw6PCoGYLx1S1BQdLHlOGbv1giVxBe6qqrqfL3+sXv3jTTdP4q1JMhUtBJeYo0/3vDNnsHIMKNRwIvTKmImEi1726Df9doBUVpnIIUaqWZnD1drC3xj0B8MfKE65a0mhaSFdxf4PBWm1FBs6CbHI9esPc0Kg6OEeicmkF0qY0s7Ha+POK1T0WY+fbt3hqSYqDZiFKmp8OrxSAmucoEPd6UgUhx9oE9HJglFRKkLUEKxUhbKVlmAuzPm3lEdJK+jD2BLMtaSw2DBJUWBH5De/wHVTJmpWBlAQLjdlNd7C7j7oCipCpsp0y0JKFF1KJAIA6rUCoq7kkdutUhKZgUlYCnVYSgtxvdwH6462htpdMmWpSl+Jc8wrTY35UgqAA8xhOdohp9ZJQD4coWWDUpZW9RylKCh2YHs0Kx0Da3hqSh0y2p2QaCWsxIN+rxUeOI5Uqk8u5KgSOrpIz6Qw0BmgThyGo0iqW9IBblD4IveBJMwImUoRLCkgc1IJFsk3Y7AZ/FeI0rJT+DiegTRO+jewWC3XlFms28elenS1RXOYMAfTZns/1jC7UEEkF+UJsT0SlwB5v6mISizlrG5D9MbbN/lHPPSnN5lj2Y+PJ0wjBK6th+t11bJQhEpL1WAHUB8AhlXCidu8BpQoi9w7kCwDi5YMHzjpvFb3NmGXvd+t7X/rgRMKcMBzPtk2G1tiP1aNIaUYqkVuaeMHtIwTYWUw3Z977m/bziSpSGB3AuGJwzXsN/lHqUgG+BZjYBn2+GG2236fOfbAIv6gi9+0Vtor1jaSslKlBykgWBF7uwy4O1rmIJAalhbqxv37foRdLsc9/wCh3z1y3rG4U7Ne7hsN82A/OFSqxqct22yrXaZKmSAA4FyHGdw7kFrx5wTTIkrM2iUWQU8qQkl1JvUqq9iPj3goJUXCSGYtcBgx3OTv5RaDTYEscAh7hyB5HqzOYcU44RGpJTScs0RlTZadSNQZY6sEpc8pDVBPcF2EG8b1/ilAEsMCfepVZQFmpFJ8y8CgAMmxA7O7E8r4cuOmezx4rmHSzK+By3b84auOUJqE6jJA8vRp51EAXACUg7v5/dt3jpOlL3HLsTd2Gxfv8vW5alORuWAKR8yOnr6XjxaCXLuCL2dyBt+gw2iZZyy4PFRdJA5ypgGdvLO7du8ETZYYGnD5BLhk56fr4SmId1Aundx5+uXt+UXKLpIAdwCAfL3rNsPnBtXYXrHVqRXKlbEdOuCGJ2LDs+IJliz0slrOHYO293v3OIpkrchmBBe7D4h9sgYguWoJDpLZYdyWODcdB1foxlxi1VFrUnbdlmln0llAFxfLC4VTcXcAAju3lZJTLSDSnw9rCjN7s6XPUjfe8CJJIqAJD1MeliHLYZ79vS9M4EG7Jy5Zji5c7kN0HeIelF58fxZnKKbGet00uYUkqIoBEssSEkj3gAWfewEDaDVKS9kT2UpDKSlKnBY0ndyHe+3KYFkh0ggGokWAAfqqzWyGNiQO4ipaQ7lIJBIqs4ctgfym/aFBTh4tr8r+QvUKV5SLp2t1E00S5YkHICicCki4GS9x0NoH1GgEtJVOVSVkVCUkkBQsJibcig6rhhfHVjKWoEKRSCSzLJLYcWNttnIaG6ZSlUqRNKXcF3SktYlaCHN7Ulx1joTOVqjO6KZKA96YEHk8RRJSraklJAJb7V7dop0msmEKTKlAFKrKShqh9lSbgH+8Nri8O5WlUFTEmXKQ5CUGUAkuynWoFISS7MOQXzAUsaiSpMhITqHcsqpKym5IIYpI6FBV07wAsAGpWwmictMozAOUrrADgOJRqbGe5LxdoDppaKUzQ98ppDgbkJJCe+xHYRHQaiVJmlQC5JS4MuampXqRym4FIvjrcnUrTOT44kqmBjUulqW+sUWCh3v02hh+ALx1UxSJakywVPdAKVli4BYFy9iCOt2j1PAZKpdgJSmemYbOW7lh5dYN0Us0qJWtSjzS6E8jCwCnSkgnLOLbiKdTpZkxLqUmSCKVsUkKBP1iPeALNUTvCaQGJ4hIZVKUuXYUg3+Bv3hfLQogqoUoAsSAbE9ekfTNbplyEy+WYoFQIMoS+Y02Jp5mIOcEkwJ7QadU2WmXRRuCVoBf6wpMwDoXeBITQn4dqpK0lSZSE7ErJUHbZJt6wTJmOQlKlKJsybfAt+MZXTcFUoAqUUg7J/GNbwDQgJUQC1kuSXy+/wDdPwimCGA4OLVpQ5c4dhjJsSXiviOoTICAlIBLsaXw1gcA33IEXTlKmTEoAmgEEBaQSLEfK39YFnJ1ZJBkyykYqIPkci8FCsHk8SWtiEzl3uSaU9HFOwcGALrmLZmcm18lge5v8Iv1M7UqMquWlMpIJYYKQHIYkszHHeE+nUB5Zfcdz13MBpFWXahQK1LvcvfbsRvj5RNcwFIPXJBIe2wB/D4xWlGRaxa3l12Hdo5aQQ1iD0c2I3uw8+7QItukWFxYDu1svY/1e8WLVvh7EG3Qf4vwfrdPqeKXZKXIcOTuDnqd7kwMpcyZlVujsPSBJ+A214sa6jXykBip1W90Ofja0Vo43K5iJa3UQ5A+4Vefr6Lk6IBLnbeDUcODYz5W39fPvDruyU3eF7ywcalsQUTC/wDQ9cuImOOoAVyTLncdm+0P6RRM0YAc2uBh8lvv3go8NIFkm9wSnIbzxmJaXctOfgiMrjsoGoS1hy6u6mAqz0AjxXGpLj6NRYgh8P8A4vvj2Vw5JCmSSoEC4bDW2ffEQmaNIpKkm6gmwNz07ebdYdLuTbqqJo48jcL78vRt6h+MTRx2WGpQsByTbfqDVa4j0cNGaT0ZsX83O9/yivR8OSoKYVMSCLAOCxzfPT+oVLuVcr4RL+3JLuqWuxdNgKSxFg7YJDYvEv8ASJIsELY9QLPbIIv+EVL4eHGXOLWvv2yMnpFyeFADvkGwwH/Xx6QY7iuWcEU8flUgJlrbv0IuBfLubvmIjj8twVIVUAwLeQI97cAegxFml0CSARg2uB1u4UcM/wCrxGZwYB7Fg5tcAef+YDY3gpdwt1wi3R8ZkqsVFCiCHUGG31nYbh3hvppoKRSqphSeat3TmoO5Nup++M/p+ChQCiGe4cEWBa4NxE/7AUhQKFUkXCgoBsbjzgw8WFyT3UaJEwssWBek3Bezg9Bm/Zj2jxU1IIJKgoAnILgMHPa5uH97yjPStdqJaiVATA4JdhjuGtjbbvDDTcYRNVRQqWshtlOUuqmrLC5Dtn1TiUp4S/UNl6pQUoKJAwpIPKNgM4bbOcxxXcMTf6zW3wS9Lv1e0cuWCGwCR63wX/Pv2tSl7Nu3NgljsB3iXgtZ9nzJaeYUWNRSblm2d1AdcebF40Gh4glZ8OZTVdnHvNZwf0YzM1JpY4IazAkdG+zn9XiOlnlK0qd92J7ddmB+cF0iZ6e545NfqdCaXlqIAblJw3Q2O3XrAOnlSUVCZLILEVVEi+1/dBOdm6xRL48Cop8DUsSQ4RYkZZlX+EGTS4Ygj7JIz2I6/KJjPdwmjKUNvLTA9WiYpAQpAL8qRMBmBItcKCTSSCWCKQN3vBfDuFpkODh3Lh2tkE7N5bxVodVOStEmlAlFJFRJep3AHRLbN0hFxLj5kzykKE2hw5SwucMLlh+rRbd8mY4ExcyyyFSVhvoxcFrgqf3e7FjtvAyOEiVWmUAmWpg6ySvFL2IAN372d2i/h3E3lpWZiEpKnU5D3c0hP1exJ2xvDacQGBJD/VAerb3GNXvDaBSAzy9YdKRJeaQq4ZIGTdjZRz1++LzW4VLR4lvdmIOPNRF794Jl62UCpEpKpi0p5Xcgh7Cq9O9iBi2YsWnUTpaaXkTHwGWCPRwfIwwMzoEeCCV8xLMTdm89+8ONJOqBblSLqwMiwBcAEuB/lA+hnqIJwBsTnr8MfOA5HFlmZaVPSayWf6Nutjct1hJ/eyU193Br+HyKa1HJAfLAXsDctbDloKVYHy7/AH+sKdLxuS30k6UlW6fEFtmYmK9RxEOR4jhxdBS6Q73ClXLffHD1HQz1dRz3Gul1ChFRojx5FVErFQVcXwmn4+8Yx5k+9eyVEDqQLv26P+UNuM6gqTZUw1KY1KFsl2Fmt1/qBp0jw1KJUbHfulLgP0Px8o6+n0vVae0mU90t3fwBZaaS+X3Pldvvj2WpnONrH0/Xb19wASS3z6O35R1OWJc2ts+Xzm+0bA0hPIQDVcZv3ubN8T6QWdOU3szkFJZ/TrdnNn6YiiUUqJVS13B6ObP+tu8FIUre4ZmdmHQdRn1MNsUUqChKdJBuTYOcO16bkG8epJS+A5JD3ybgPu/4iJS0gs6hnJADdyNw+3x7mcyaCm5ZIzfcPfZj67doRXDLZyQWd9sWJu4dnHU74EWT0GoBj5NmlzdJsbdPQwMNWKaiFFtwAW+rh3dtr9ou081JTe2CygSbuMBMT4FKX3sIlLlH3lG7jPkPh0t0G0WKVgOdtsYuHB87Pkho8UlKfeWNheXMcMX+wxb8sRWdUDZ1lbswSrqCHqSLZNukAXa4LFSvedyLE3O+e3f8do6SSHYC5JwMEJL+v3DvHmmnS3WJiJqiDegPn5nz6NHanVprApWHsAoEkebecJsazwe6xBJSrmyFNm7hJUR2BYeZuWj39lu4AyzF+rX3LC9nipUwqFIBJDbE4Nvh67xFWrANNMzLlQBbpUW2BDvbO8NZQSai/LJacUpWAagFGwsz82+MnbaLAipww5nAxcYFt8Ev87xSqYlKi1gq4VSwcB3uzG1vOL9CRMBUm5ffOGJbvh+20LcitjqkixKEhOKQ+9gLBNw9mfJcfJozJaiqyqQHcMHJ/LFmPWzRbPRszFIJbBdzcgnyvj8PUTMtUTfNwdyMnJGzjMIp1RQuWKXUxYODa3NsTkhx2hWuUlZKgXYu4G+XD4FvX5NKHDKNm6M9wcb3GY8KCzsnOCdja+4Y4/pFJtGc4p+BYDUyhgc13O7EPkAN2sRHqRnl+CrgEDpvt90DaeaUHmID2B2vbHfz6RchmsWFgB1s/V7QEp0TWgMCSet7gXAa2HAjwsoAWNnIDj77bfPrHtgHuSNub8fz3EdLSS5v0cgBmsGfpf4tiJLQ44NqC1JUDezW+UOUKJDOU90qIPwORGUlJfAUN0qByGcjoFXJvnF3sx4ZxGwUqtShZTlNIDZ2Y+vmXjkn0repvg6NH1KUNs1Yw1GnWLpyzlKUqpYb1KOe2YyvHQpKa0SmINRpOX3IEbeVq5MwJFcsq94BKgpiPrDyO8Yri3ElpnGSQkKJyFMFVKN0/ZttHY0zhVUZ/R60zFCUoISlSsABLfxVEvh8mNOudJkoAoVOIBVzkkIJZixbltlI2hQOBzAolNBc7+Y9MCBtJwtUtTzZpTRdkEqs5+Nz5bZewhcGs4VxxDCtFFYDMmn6zOktfL3BZsZigyJ8wmoqIclEwKKWCmNLEA2Znt5ncWXxJKAVI04H1vEmsgP9YsXIirU8amlIJUtYUbHTgBmGLupQ7gCKrsNnkzkllKSbBnNs7lnbPeFMtepTWtBMuWovWBy9HqCQL9WEPqVEhKKqrWTkuDb5foxpOF8OMtITUoksOYv2FsQksWOUqwfKNRpJqy5lkjAKZRAIGCyUirOcmzxGfp11lc2WtZKWdaSPSsXPlePt6+Hoci/479oH1HC5RepL2wb4bAbN8wvXoytHyzRo+hQby01rdLDYpIAFup7D72OpmhCGApskAdi6uofCdizjFolx2iXOZCXpDBJsA61Fz9pRcFsDJfELikq5lHDZLtU927mL5N1VE0THDlwSGAvdx9l+4PxiZJAt7z322uQR5m3b1qkrDkk9wQDnHZr/AH7xKaEhIv8AatjZx2bMBTFemWrIII6t8v11hhLVclvIMb/obdjC7TKGACHHk/QeWIYh7X/V9x8P0IbCJcA5zjIJ67D7uuIC1skpWxLggLSGwC7ZGciDZeCFAOzgp77AfhfMVcQUVrTykAICAWcFjkEj3ecBsAg4eIlwVHlgkpJUXOLu59bsbYfzhhwOYkz5YIBQVgUqS7gikXLnd2P3wAqyfDRzKc1N2vbt+R7RPQEhSVcwpUhWLMDl+1vX1gwlOXFjU8TCFLSuWhSkqUP3aBgsPqbR5puMgJFaApQUSWRLAIYMP3Z74baB+Oyf/VTQLOsm5pzfJI6wJL91Qv1YfiXtEtsjdIZ/2ogqBKA3M48KXzOo0gmiwZgWy3d49RxNAq5HDgp5JQYMXSfoyDdrtClP6v8A1j0Y/r/WJthvkN5vFwVOlCQKif3Uv3SByvRkGq/QiCJXF5fiyjQmmoeIFSpbEYLMl3ycwlkmyk81w7C7kdb4zFf6z/WHuYb2H62qTNXKyErNlGxAcgkG3usYP4V7SolJI/ZZMyouStIJBI+qc02x1eKONpKxJnDMxAB/mlmkk7YbMJiFEFeb3JN3N3/XWDhl+tmlQ9HH/EWQoMlavte67lITZwkFh2EScXcuXuxyLWYfEfGM4Ovx/QjSaVRUlK02u99hfl8nGOwPSKi7wa6eo5XZNSA7AllDcjcZFiLOOnziK5fLZVqskfj1F2/zgopYEh3Ha7E2DF+mcXtmIbjfflzZ7hg3T1+EUai5aAbAHoVXs4N3P3dx5QVp57pc3BDFtiLknuRjtmPJrgkDBG58hf8Aisf00USJdKwEk8/Kam2DggAh/wASYsz4d/kFvYBVrZ2JAbyIwH69GiQF6lJbBDi2HHwtndo9n8uCWAzUWHli5LR4oDe5DOOpfyIZyT59N5ZcexGapQLuU3cEDFwSzWZ+jZ2ixdM1NlBNQUHS1rX3uncfGA73BsHJPS5pJLu9ttrYiyalvrF1XZ+p7OSzbPnbEC5CWUXylHTqExL6hTeGEIAFIJBKiQ/2QP8AKAuOp1UzUzCiXMpdkkS7EAAOORjh3ivVaqaj6aWUkpTSp07P7wG18iPOFe2c5BTUykVOqzlibsSbdo3jFzVo45pwdMMXKmrlc6Fy1izqSpNXf4/Iwo1GjmhlVUNujJsWwH7P3j6FxLw5qEzU1KdkpYAO4cFyMX2MYviuhJLpUbWKdjGUognYFo9XKlLc1kLTlZBL3sAPdJ7kfF40Wlmil5SQlA95Kk0sT8nsXcxmOKJUJQsEqBpdxURTYfLuY1fC9NNm6NPjU0nl51pqVSpwb3DdtoRS7FfB1tOvaw3Zs7+Uarh09AAVWCkXqFwfmq3xMYoTaNQnuCOmOb7hGn1U2VJQlU1Z7LLkuzXKRex3hTlthf6DUd0tvAXM9pdIkkKnIBdjZXbemKZntPpSo/Tof49f5fKFqeI6UFJCkpUd6VAlxcEs7nHrHcR06UIUkISkpdVBYCohw4NnLdHFo41NN1tl7jR9LSvcjK6+qslYNSgGOxZCQb4yDjFXeKpayz7DbPU/AdPKHWn1xpCSkKFnSprHse3d4t4ZPkGpKUkVMohe1L2DnJB2O0dk3KEbirJUoywxHKmAgWNi2WBJwXF27f5xDUSmTWAwDlw9ms/R3c/GHep4EAOR0l2YkkbfFIJO4MKeJ6JcpKqkkJL3BcHzIsf8/KFDqITe189nh+fwHsrMRRKlKSHL9ioN3LHcZeDEhmt0fzGXbb4RTM1SpiQFWIOzjNsX6Y7xOU9zlthvndm/QjVlR4LkqzSbEb/HOWJtvB3E/wB1pTdgqal73dKcB8NZoDQsctQu3TtfYuO3cwcUVSZQGROJbJUSm4zd6T8BeIfBapNCXh6wiY6g4Y7P3xUl8NnMMFoUCU0H3QdywEoMFHFikdvlHStH4ZJUt2dHMktd7EFWWBsehtF4lNTTNWEMktSWU1qiHAOAx8ukVDCOaUUngj7Uj6YKb35aFZ/hb8IWSTcjmuCOU5+eIb8dl1BCrihNBdJTcXY4ANzCbTe8GJF8g3++OeapmfiHzpMmUpUuZNkCYksXngUkEuGfOPTvEZY0zX1Mn/jJ/Ewl1PBDqtZxCZXSJU9bgIK1GqZMAZLi3J13EMV+xshCFqUZ8woRU/LLTd7MULbH2iziLlsTrz5ydOn005q0g2QnTWP7VJH/ANwgH/mjqNP9WfIyMz0ggP8Azb94X6L2VkLQp0alJSUj30k8zMSnwmbmf4Z6BcT9kfDTPmInLIkgKIXLpcOh2UFF28hD/wCNScbz/r6oH02psU6w/wC/5+Br5U7TiR4atTp/fqSfHlnIZQeq1rxAaaQUJCtTpyHIBM+VkhlACpnDg9XCYwvC/ZybNTKqZEtXNUVAkpqpcIBJeyhcAOI25momab9nMkgFkn6T3UAgBQLsVCkFsODa8axgq8/MjZLwX6/JMETw+WuyJumBb/eZZe4uzu/ZtxBHs/MJSuVdxzhhc4SofMFux6xhZvBZshaVqYo8VCQsHdSiQCk8wcIUcNbManhmrpmpUomm4U5ylQIUPQxjqRUWiYy2yNAhYNs2cdXcdiRe7PZrvFajy4Zw5e+dyWuXL2YX7x6feJoWC/x7HDO23QRILGQlSXDBgbtv53+Y+F0zo3KylcmoWZ3bYB6gbsS1wDk+UC66WH5VPSSbZcOzXJGGzDCYjBIVsDUk79TjJMBzizACq1Le7bqxtv5wZQYZdLWVpQQzEAFhcKG3Xew6HvE0LubMoBmN7Ob3xY/p4FlWVQoGkkMdnAZu7gt5t0i4KsAWFNgOgIFgArPfP4OiVJo6olwlN2s1sH3vLr0AHlEVF2yojNOzEuHJ3p/WIlJkmYQlIT1+yz4U+Mi5L/HMNESpcvmUxIAbpjLb9XVa+Nhz6mqoPasvsvODW1WRUuyOZINQ/wAQU/bzGxfyjJ6/SmTMoIJ+yeoPlg7ebxrdXx1BmICnAUaSpw4DEs5+4Q/0Gn0UxjRUQ7F1ElgCfdN87x0aMpRy/E59Wamkl4CT2N1ilS1yJlVLMlmJufdpL7l3bzwIL18kghSnBIZQtYj8Wh9Im6AGtKWJDOETPmGZ/hCzjWlBlqmSy6Hq3N+3RLbRbluMUqMnrtJSsrCVF72vff5RHSaSepYUQhASC16Qpzglqgd4Zy7kEKLNcMPvz+cCTNUKyiYwH8aQRvff7ozKZ7xXUKBEyzoLj+vaxhojjcubI8NfiF7WACm6PcY3gDW6esTE4JTY93H5wBpvZmeclKU/rq3yioVQTWTS67jkmayVpmGkuB6HHmAYB1HGFTKgqaojeofDdWcQEr2VIF54v/C2/mYskcIKV1KmhYwwzZmIJOQwOIp0Tkr4kBpRLcgkuqiq7EVOoZS5Iz1hRO1xIHLS4cGygQCQ6g+bdiI0c/gUpajMqUVqAKiSMbBmbaBeJ+z9kUMkEhDqNgVEgEnYOqBNDoFl8amSloRWSlSQAPeYlI90vUL+YjRSuNSyFVnwybEKwbYvb4EA4hVxX2D1A50KRqAhhyEg2FuU5t9kkxntXq5ng+G660EsDcjLgghwBhjaJ1NHT1VUkClKI/4pwwVLXLDoqsB9UAYGwZ8Y7woVKIsXBfrbbc+XpBXCuIKRQkKAJTUwwWTezMDYizY3g/ScWlTyUrRSofWSxvliWcP3HkYb03DBcdVMXaZwE3ztgXwN72MEa0FWnU2ErFiQ4JSUltxv69otMiQL+LSAcFYbyLpgnTanTJBHiIIsbqB91+2L/KJfsNd8XyJFpK8fYBDFwCaj8QSOsASlKDiznLEW5gbFrFwMN+er4lrNPNs6JYYEUqAsDYvTh/vhd+z6QqJ8XJcgLSzZP1XaJaZE5J8HuqD6OWoBvpSCA+6QRvfG8BcNvNli91pG+6gOveHAmyDI8EzBS/iJVUHYOl3pZtnaKdJJ0qVBQnuUkKHMn6pd/d7RMotsyoXez/FvCn8RBWuX408lKkszomTDcVAm604fEOZ/FZUyuUrXBlJpUlS1APeplKSEgWBycQr1HB9ITUdUpJUCu5BqBWbjlsAzfCPE8I0RJ/8AUoJsXKUk8t90m1r7M8OWmpOzq0eqnpKlTXt8+0YTZipSJpRqWUqlVQUZhUSzg+EhTAABrbwDx7jqlyvBTNUmsNNWtKjUGAoQ9wmxqJAJASOrtNH7OSJgBQsKBBFSUoD3AcctiKW9esEaj2ZlJJdSqVcpagMA4saLFlKuLwLTSr2fRL5D1OrnO1wn9W/n+eLMpwbiQly0S5hBly3pKSEk8xUWJWATzqN04t0ZkrWoQmtU1HhO5UKWWHJpQK3rN3BFi792CpKJCwpWoKDMCioFglQd/dSkNckvEkcTkgv+1JVd97bmwYbZjaMq/eSf4o598v4ZNfgzGcS4urUGWhBSZYmpWzGp0OEgqqUDZSsAD5Qa1h3/ABb8/lDfVaHSzF+NMnqJUVKBKjdgMO5ZPe2OkcdPozYT+pYLHn9nAvGU05EO2W6DV1IClEVC1x0tnyAg2sE4KibUi1sZFzY2/TB6U6aX/reUuQSq7hiSOUWH4mLBqtI7+KCQ7MsYuThLtk/OCsHRDUVZ5CFzHSFJsL2fO/5eveBfH2OS2Tl3dwPgLHEXTdXIKQ6+W5BJD2ABu3u4ipOp05sJlV8VA/hv2h0P1qoiJRU5WXLNZLZFm2Jt8xgxcElT4pIDDIF7jsBsS3aPU6mUApYUWSkk3/hbp2azZjOcX4+uoy5fIkJDMLuQG7DPyi0rMnNJGm1/HkSZaZZJWUhi16rggmwDgJHfyjLcT4qtS7l0sLOLOMnqf6QIpCp82hCa1kBKU7ktn+naNGr2Fmol+LPmoSpnoYl22Kxgt0BvvChpwh+74595DlJ8i8+HMKUlQQpwRUWF2YEh2zD/APbZsk01LTZwwsb3ZVbHO0BnhKKmIBSbxJehloSEJJQc3Puss2SwsHTFYEMNJx+WgFFKiCpyCAdu6o91ntJLEnwwkjZm2Her53hRL9nkEWnF+4/pHTvZBZ9yalTHexz5wYJyEaZTbiClSwrKQr4PFU3QTJaSZiWIYOC4Ib3mZx8rx5IXtEM0H+j0oCQsg1HY7Wy3W58oF49MnBIEkVKuVdQNmt2OLwNK4zPCSqYHdikFISWKQxIYZPljMWyPaRFipJS77vjG28OKbJm0mZTXTdUFkBUyxIsgnBLXp6NDbg6NSskTEAoqDFVi3M7X/lyBDT/SeV9lfuueXDEWPfygfUe1qfqS1KL2f9CG8OhKSHGi4ezJFybfkHt1PrBHEDKcy1ELKbKCPqm2Wvvt1i+XMmJF00TFj3bKEpJG5OZh8rY6uCnTSpSSbBrlSr/HzPrCstpIlp1TZAJkLJJGFl7+RsR5se8Y/i3D9VPnGZN5lkBLhDOwv7o+97QfxD21lJLJBV3GMt+swMj2sT4hSpBJvceT2t2irJFYlGVchi5FJqSSCkhrjAJBv0zCmUilddSqgWqTbAYsou72+UbCZ7QaZUuol0qJ5SkgvSlwQHc4Li1xC7hGr0y5tpay1TEsA/hrN07hk+rQ1JhSFvEZw5AUoW6Ap1OHuR7odusLlqR/sZfz+do2Wh9k/HlpmIWooOKmezpw1miZ9hCAefOcQ9yJox82WCpAYJ+iQpxlyCLdmEDrlpqZgq7Alvyj6FpPY+RMlmdNmqTQKSQoEAJDFy6u9rZZhiJyfYbTqCVJVMKVAKBSUmyg4Pl+to8/V9J9PpycZcp9vzNl0027swS0pMxIUkU+GjF8pD9A/byi/wDZ9NS5SsG78qbdLO/nG6m+w2kSBVNW8wgJU17fVHdtjexiQ9itGlydQL9VJs9W77hK/Ok9LZ/tfpuc+5lfZZ9zG6mTplCUJomVCSn3aaWKlkXN8v6iBv2bR9J3/wCuN5rPYvSlwucv6OWlRLCyOZlVYIsr0HaKJfsHpCeWetKgqkOUgkpIFg75b1DWIhftbpuc+5/QPs0+6I6F5enk+CsISUuK2e0xYJyNn9e0NZkuamuYZYTLXzXJIDuAxLAOfhFWt4MtMuVLlpUvw6kkt/FUC3kqIqkSzKmzVeEZ8wh3mh7EAES8VA79nsSY9PTcZwjOLw8+85JSmpSi1wZL2wkyiZCphXSy0kS6LFwoZfZ/lCI6fSD/AG5/4f8A2xt9V7OKmqkonVSgZopUwyJcwtfyiyT7C6dQrTNmrSXZaaTUxYsyiTg4Gx3tHL1PW6HTz2Tfw7/6ZtoQnqQ3cGT4zIlnwUioJSgkOz3WoE4bKYXDRI6qc49zrH0fWexWnZC1z1sBQks78ylNu5JJjwewmmSQTPPKpzzAbgEO9rgDsY5l6Y6SuX7n9DX7LqZyfOdUwmKBAsEpuWxLT0Be7mKAgFuUB93+505j6bM9h9KpYeas1ArSA5dKSHZQN2qGL3EVyvYzSEltQWABFVhzJqBSSel37HoYpel+mrDf/l/QT6WXf4mC1bJnzBSkAMkEu7BIBcgF7h4jLnuoAJS56OWHoLRvOLewqAU0LLlyVk3Jd9yeowBjN4pHsHclKyH2Cv8AxeO3Q6nT1tNT08pmc9NxdMwvFuaasAe6s9T7rAN6fOLJUtU5Syz2s+AeUPtsD2hrxHTydNNUlQXNWKnqamyST3PSPdFxPTkBPNLA+0CQfQn1tGu4VHnCNJqJKhMkmhTM4AJY9lP+iY1gEyay56ytRAsLAAPYpG77C3nCDiHHUIJpQVEGkqKjcpHx7DaOk+1gC0pKFXpuC/vAHdusKwo1Wkkyh7yhKLskqS4uBkNa+/lhniPEuG1ClR8NYHKsB87jqIhwvicqcCUlK7XBsfzhpLU8ugMwDJJDlGdvrJvizWbDRDvwKVcMxGt4Vq0UsorAU5Umm4ZOXHZRs7VRPg2s1AP0iFLSM8rHr7zNsYaT+NKkqCZ0lSGJBUhQVU2FJHLynr59DEZXtQkkshTFTJKiA4AdyG+V4Iu8UEltHyJtgSLEe6drQq4xoUSwlSR7xZj67RR/pEHvLP8Ai7Wsw3aKxqzqXK+UAkJa7Nv8fwgboUclGs1KkqWArxUoNIrJOAAb+f3CFGo1st+ZFIuzG7PuG7x7xKWuWtSClSFHmUBu5cXGRn5xUtSKBXLVuHAe4Z+8U9sHSyEd2os4IzJqAhRAJtipPUHz2jRS9NK0ctGoNS5yxVJRMSAE/wDuqS7gDbu3ZhOBcNky5Y1k0KMt6ZUsj96odUlnQGc9WOwLqeK6xc5S5iiFLUXJa1nDD+FOG39TCbvgrbs5589jecEnFchCyqoqAKj1LXPrAvtZpVL0ygm93Iu/n5M7wu9l+IplygFEqQpmVlrAO24LE2jQyOIylOEzEk+m2x3yMfhBeaFtbyj5QqbJSEjmmnamwz13+EFJ18oTilWnLgkE+IQRa9mztG94h7MaaaalS6VZdLj5AgGBT7JyHKmcnz3+MMkQ6Lh0nUSgqSSAFF0K95JZPwItkQx0HAzKNQAUli5JYpdJDjrZRh5ptBJ0yLUy0ubqLDa99+5JhPxn2lTSUSAVvZSyGF9g9zvfEPIHvs17Y6aVpZSJqihTE00LUzqLcyUtBs3270R/1qv+FM/7I+dSkymTXWC2EtYObX84sMjTH/beXLBgD6vw6QNXolJQtQCroXfZVSbEkgWFreQxFPANJqpBMpcomW5UClSSEm5ySCsYpBAZ7uzxjp3EJ8uXJTImqSgSUsCpI2mM772TFSuL627Tzu3Mj/3G+5P6ePO1fR0tRz+8tsndNXTpK07Xbzm9fWxTTrKPqGo0SlSiCgLcklDkAhRLodxZjv6dK/7NIU6ZaT9I5upPLdTgO1ValFrC6sVR80ncW1jlpxGW50/xt9yf08ceL6y/053bmR/G3/T6RyL0HNYWp8P8jR9VH+Xz7j6bL4eqyShICR4abq9y7Bgu6QQg3uzhtzX/AGcsMpElCVh2JUpxyS0guFXTysR9YJTgx82PGNW5Hj3/AJkfxN/0+kWTeMasC05rH6yOkxvuR6ecNehZ3frPg/6hfaI9vPuPqM7RrUoLTMVL3KWcEkAXuHZozX/y7k2NWMcv/lGVRxvVsfp+tPMj+Nv+n0jl8a1d/phu3Mjqpv8Ap9I1h6M6mEVGOu0l7F9QfUQbtxPoi+CrWpJmzlLAJLUtdSFIcXLWUYS8L4XqtLMKaPFlKsShSR8Q4FD5ULvkHrlf7W1Zf6bq3Mj+JvvT6RE8V1f+2z/Ej9fWT6d4tejdV7lqam5Puu3HDRD1oOmlVdj6edMVJmOLqLgHBIDOwOCRh7g3gP8AsiziUHoSEprUGJpCwVBWwQguA7pByI+dr4pq7tP6tzI/ib70ekd/amrv9PvbmR3b70+neOePoSUeNT4f3LfUxfMfPuPpJ0KsCUwFS0cxBBWOZJUFvcqULBg4OzRCZwq5aSCQXSSoj/WKVY1Eg0rVtY1AOFNHzv8AtnV/7YN/Mj9fWT6d4h/pBqceOAP5kfrf/wDGGvQ0l/2fB/1CfUR7efcfUjKWqUy00qFwHfGL3u1jm7npGST7d6RKilSpgIJBBlrDEZGIQcO4xqZkxAM5wVBwFIw6XFr/AFj6Qj4hMkrnrP0hUZhLkhrqfriO3oui+yRcd1pu+1fFkamr6ynQ04ZPRq9XqELQkXUUFy55iDv0Yt98HS/ZpKlNjb0jL8OnlRUtDIUlQIKQx658x842PCPaKpvGASs4UMG5FxsfLPQR2NpKyFFt0jN8U1iEf6hyVrBEwkEEFIJYYd/l3gdOukmaypSkkKspCn92+CO20fSJkiRqA8yWiZTZ9wWFnyNi3lACfZXShVYQoEXyr/ugTBpp0zL6bQqlkqkLqINNsgg3BT5hu8b6o8qmY7t13+cD8N4PJk/upZBOSXJPmS5+DwVNnpS5mKSlh+I9DEtpchV8AntGiStCEzjS5IRM+wqx5v4CzHuRGN4vpDImeEoHlv73wta6bWPniCvabiZmLBY0pBpA7s7jclov4fPlamUmTPLAfupr3QSx8NR+ye+5HaC6yVVqhFIm9rYN/j07Q54FqisqSUNS3MkWuHbsbwLq9AuUoyxIUFpJqKyFC2CAAHSesQ0WsWioJI8RRdyGcFyTinaJnK/AcYpXbDJqHnTClIYFQ6A2UQ3954bSQgy0ztQEmWkEFslQW4QlJV3NhlxCKR4aVJC5ikhRK1KSHOXZId3IKrgHrFGu46Ji0hKSJMu0tHTaosLqLbu1+pd0GORtxPVGZ9LNADiiVLFqUgYDYAYEn8hCtEhh7hXbpbowFrAHH376DR8EFQUQ6jY1FzYW+ENZ+isAQLJJwPnDsXJldDKCE3egswDMMCodcHETn6UU1JUCCoB3GaSWbr+Rh3qZNKPpEEpP2L0lsg7iwt+MIZ3D6gfDNT3YZs4LjIzvBGVumD+6rR5pNRMlKs4BKcdifzPnHuo47ONYqPNY2x5dPhAKELSpIIIZQw43weoi/UcbmgkBKA1m8NJ3zcQp6avCv4fUFOT5Yn1kvlB+s5uryG5v98DT57IAz1giZLVSFNdzc/DfaFi1h3PX5xbkmzNKiuXMy5GSL9BvjvE1ywUhzvYuTYfheLZUgLUAmknLEs+HFsP2h+ngLpSKUk3cEkAODg3LAtY/fDVDSCdLN08yXzIUVSZIFlM6UgizfzH1EBniOk/3eYf/AKvn27mDtJokoM0Xcyyku+xTg9ISazRipkWB6/r9WiVNlbLY11s7SoKQdOt1AEfSHCnPTuYjLn6RQmHwFihBW3ilyxAYW7xVxLTKLKKgWlg2cMAAzjqxinh0j6PUElJJSkJLvYrH329IdsnaQRxPR1gjSzXPWbbPl2gzjOr0klXhK00xXKkuJpFilwLjoYRJkipJ6Z7cxMHe1MonUTDlgj/kSIakNxocpmaQSpS/2ZbLdh4zMzDpeKzqdJ/uq8P+/wCjduwgSfLX4cpJT7qbWB+sbt8PlEUyT9k/CWN4FInb2D5M/S85GmUBLlmZ++d6KbY3YfoxDgmo0s9YQnTKSepnE4p7fwp9O8D6WURKnkgj6IIDopuqYkfh8Io9m9SmVOckCxufi34QNjSR6jjWkcAaRec+Mdmbb+Efowzn/syJctf7Oo1uw8ZVqKO3VKfQ9TGWm6EJsDcN8eph1xOcVplABqUEgN9pWfwhbhuNBvDk6aaoJTpSMC85Wzf/AMx6dzC3TzNGokDSLDAn98rb4eUecMmqQ5ABJclx0SXI9SfhFKNLQpJYgN5v1L/ryhbgpD2uRpTLWiQazUU/SKsymOQxen5QhToa6VlQQ7sSDcg9jD3VTUko7Swf8RKvW8Uo14SVJSgkKDMLuBsBtYQXkfCE+i1HhmqXzN7wNqu0PJIkzqQlYQsIcpWydyWSXubwBPAHOAyWG3wYtYEYhpJ9lzPT4ktQuAwO4puOxDMx6p6wpRvKwNSzXJyNLMlhQBO1gerEW8vkY9Vrp73Km6MPyiuZwvUyBdBqJABzZINgel4pXqpw2I2uH9AQwgSXjyRK/BY8+wK1WomrKQQVGxxuQ+PjEZktYFc1RvYVFyW2AzloE1Jm1lnABsf5TYg7XDxWnAF1qc29N/gYbjm0NS/mJahwa6VKSWsm5AYl/wAbdYt0iUJfYKuXcXIHXH4w90WlAaD16ULABDjGPWFYwbR6wKQJU44B8OYbtYcizuLFidz6g8U4apCgoGhaQbts9P4wJ7TyJklKShJ8O4NgQLDNrPcP27xLh3HETUCXOrLDlUhitrchccycl7n74kq7wzYp4ZJGUAuLuBjAB65zFUnhMhCgpElCSOgf4h8GOjoQgqZNCSS2L/A2iqdPSskKFjZvvjo6LAEma+WnxGQWlg2tgPYekJ+BiYuZNmSlJRUgBKSHFw9/z+6OjobwTVrI01iVmkqoNAUWYgKNNgog4Hbp6J0ldSk0SmmEZBJSKiCEl7W3zHsdGermSfc26aTjBpeHAH7caRpUsBCUsulwT0U72AzfHWMhM0ZuXH6EdHQ+OCVm2wjTaEcigSCwJ83OOgZo23BE1ISVXNx6EiPI6KJBeNzkoUokFsFjc4x0hNP1ImTAQmwSmyr7D8/WPY6F4l/wjNUtKiTdqUhjfp27RUZ6ZaaQkXzb7Ny9w9o6Ohokv1GjQAil+ZNTHZm3+NosmcNTOnlGCtBv0ZvueOjomTpNoqCTkk+4TK0aakoWKilKg/kwH/MYknhqE3FtmH4+sdHQ5ckxyrB9XK5Fjs9unl1d/lGN1kimaUA/WZ46OgJY94NokhPM6ibiDlS0TVBQBqBKXPQB2YZHN8o6OhFpHHSpUUppHnh8dMZgiZp5YU1HuqUHcnAV/SOjoHwFZBuKyigySUpKZizKzflYDZmvteBWTWSEsaiBfGd26DPfaOjoJIIsPHD+SWpHI5IWXJJc97HzMaCVpRKDyyEqIHNS+Liz+rZjo6KTzRMkuQeTWkyguYqZWSk1bEOHHYhAfyHSL5KZywSVJu+w+F2yGz5x0dHNPQhJuTWWax1JUl2MXI0iVS5aphJUpSrjzDDOzG469oeaLTy0EBILgM5bz/GOjo6mzGhlILX7PDWSoEVAMDt0jo6JYyxmtFEgS0mtMtI7hIBjo6EB/9k=' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker7, 'click', function(){
+            infowindow7.open(map,marker7);
+        });
+        
+        
+        var marker8 = new google.maps.Marker({
+            position: { lat: 40.813611, lng: -74.074444},
+            map: map,
+            title: 'Metlife Stadium - NYJ and NYG',
+            icon: image
+        })
+        
+        var infowindow8 = new google.maps.InfoWindow({
+            content: "Metlife Stadium <br> Home of the New York Giants and the New York Jets <br> <img src='http://www.adweek.com/files/imagecache/node-detail/news_article/fea-crupi-stadiums-hed-2012.jpg' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker8, 'click', function(){
+            infowindow8.open(map,marker8);
+        });
+        
+        
+        var marker9 = new google.maps.Marker({
+            position: { lat: 32.747778, lng: -97.092778},
+            map: map,
+            title: 'AT&T Stadium - Dallas',
+            icon: image
+        })
+        
+        var infowindow9 = new google.maps.InfoWindow({
+            content: "AT&T Stadium <br> Home of the Dallas Cowboys <br> <img src='http://www.attcottonbowl.com/_ufiles/2011%20Cotton%20Bowl%20-%20LSU%20v%20Texas%20A%26M%201-7-11%20(1)%20CROPPED.jpg' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker9, 'click', function(){
+            infowindow9.open(map,marker9);
+        });
+        
+        
+        var marker10 = new google.maps.Marker({
+            position: { lat: 27.975967, lng: -82.50335},
+            map: map,
+            title: 'Raymond James Stadium - TB',
+            icon: image
+        })
+        
+        var infowindow10 = new google.maps.InfoWindow({
+            content: "Raymond James Stadium <br> Home of the Tampa Bay Bucaneers <br> <img src='http://germantramps.files.wordpress.com/2008/12/raymond-james-stadium-tampa.jpg' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker10, 'click', function(){
+            infowindow10.open(map,marker10);
+        });
+        
+        
+        var marker11 = new google.maps.Marker({
+            position: { lat: 39.743936, lng: -105.020097},
+            map: map,
+            title: 'Sports Authority Field at Mile High - Denver',
+            icon: image1
+        })
+        
+        var infowindow11 = new google.maps.InfoWindow({
+            content: "Sports Authority Field at Mile High <br> Home of the Denver Bronco <br> <img src='http://www.monigle.com/images/casestudies/saf-bg-1a.jpg' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker11, 'click', function(){
+            infowindow11.open(map,marker11);
+        });
+        
+        
+        var marker12 = new google.maps.Marker({
+            position: { lat: 42.34002138352224, lng: -83.04577767848968 },
+            map: map,
+            title: 'Ford Field - Detroit',
+            icon: image
+        })
+        
+        var infowindow12 = new google.maps.InfoWindow({
+            content: "Ford Field <br> Home of the Detroit Lions <br> <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRURobX9YXQMMACGZWD6E64NnnmygmuSVWEewQ7EvMdtLoIz_9x' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker12, 'click', function(){
+            infowindow12.open(map,marker12);
+        });
+        
+        
+        var marker13 = new google.maps.Marker({
+            position: { lat: 33.527558, lng: -112.263036 },
+            map: map,
+            title: 'University of Pheonix Stadium - Arizona',
+            icon: image
+        })
+        
+        var infowindow13 = new google.maps.InfoWindow({
+            content: "Unviersity of Pheonix Stadiun <br> Home of the Arizona Cardinals <br> <img src='http://couplarchideas.files.wordpress.com/2012/11/up21.jpeg' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker13, 'click', function(){
+            infowindow13.open(map,marker13);
+        });
+        
+        
+        var marker14 = new google.maps.Marker({
+            position: { lat: 44.976, lng: -93.225},
+            map: map,
+            title: 'TCF Bank Stadium - Minn',
+            icon: image
+        })
+        
+        var infowindow14 = new google.maps.InfoWindow({
+            content: "TCF Bank Stadium <br> Home of the Minnesota Vikings <br> <img src='http://www.stadiumsofprofootball.com/superbowl/proplayer.jpg' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker14, 'click', function(){
+            infowindow14.open(map,marker14);
+        });
+        
+        
+        var marker15 = new google.maps.Marker({
+            position: { lat: 42.09086624205127, lng: -71.26424431800842 },
+            map: map,
+            title: 'Gillette Stadium - NE',
+            icon: image1
+        })
+          
+        var infowindow15 = new google.maps.InfoWindow({
+            content: "Gillette Stadium <br> Home of the New England Patriots <br> <img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxQTEhUTExQWFhUXGB8aGRgYGRsYHxweGhwfGx0eHx8dHiggIB8lHB8eITEhJSkrLi4uGiIzODMtNygtLisBCgoKDg0OGxAQGywmICQsLCwsNyw0LCwsNCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLC8sLCwsLCwsLCwsLCwsLP/AABEIALkBEAMBIgACEQEDEQH/xAAcAAACAwEBAQEAAAAAAAAAAAAFBgMEBwIAAQj/xABPEAACAQIEBAMFBAcCCwYGAwABAhEDIQAEEjEFIkFRBhNhBzJCcYEjUpGhFDNicoKxwdHwFRckNENTc6Ky4fEWVGOSs9IIRJOjw+KDwtP/xAAZAQADAQEBAAAAAAAAAAAAAAABAgMABAX/xAAvEQACAgIBAgQFAwQDAAAAAAAAAQIRAyExEkEEIlHwE2FxkdEyocEFI4GxQuHx/9oADAMBAAIRAxEAPwDHeHcPFRSxmxi2L1PgiNszfK0/yxxwKnKt+9/TBikLggGZ3/5f32wGYo1/DqKYLPP0/sxJT8PUDtUf8v7MXqssYIMTJ/v/AFxPRpsS20EGJgRER6gTbCbrkbQOPhmh/rX/AAG/4Y4bw1SH+kb5227/ACjBfL5NrEkCdxNz/XviyvDwEaQQLjUbbkXuRHb64113MLx8OUoB1vcfs79YtiWt4WohNQqsbTcATPQDB/JZE1AECl1EnlmNtyYgd7HBOn4brsqgppTdW8xACN+rSbAmR2OA3IKqtihR8JUmDHzWsAdh/Z9Me/7JUtJOt5HbT3A/r+WHql4ZaD5lWleJgO9hH3REz6mIxeynhSkyk+a9QbMEVRHz1sSL+nTGTd8m8plv/Zgc0lrA2tieh4TQi7NsSIggx9N8av8A4DoqqsikyYJZiBbtpI5Y9d5X5kqdbh6o3lUEbTMMVatETIg+YCbbeojD7BoxdPCSMwVXYsdhacXcv7OazLqFHMx3NMqPxK42DMceXyxSpJ5ajSWamFpmwuDoINzaNAGB+U8QVlRVZ50gqCoJBWTokkq8gG9zJm97ZzguWTctmdUvZbUNmcUz01ug/IScXv8AFXRQBquYqEHby6c/7xthnoMBJEyd5J0k/wAIBHymBJw0eF8/RChHT7RpmA1SmbyALn4Y3EWwkZ9XAyaZjHGPBmXpmmadSqysSDqZJtHZTG/ri1wnwrwt7Vq2bpHvFNh+S/mYxtfHcujragrybmFT5ljJn5afrhUzngui41J9nIkaSI/qsfKMXjVUxd9gdw/2N8MrjVSz1Vh6Gn/7cX/8QWT/AO85j/7f/txLS8F5YadNaslU2DGLwv7KqQLbib9TOJqj8RySlkzCVaaiYcg2Ak2Yq8x3nB6V2YbKn+ILJ/8Aecx/9v8A9uOKnsHyY/8AmcxP/wDH/wC3F7Je1qwWrSAZrKymV+Z6jY2jAXjftQzQDGlSRU1aRUOoqxgmwZVMwD1t13E5Y5MDmjil7GciwLLmcww9AvTfdQPzxVznsp4bRXVVz1VPmaf9BA/HAOpxziOa5VaoF7IPLUSZMNY3N/e64s5Hwo5qq9dgRKly0na5UkgyDYap727M4JcsCk3wRZbwPwurUNOjm8wxUSSQgG4Fjpg798EP8VeRgE5qqAdpNO/WNpmJt6Y7yuRpZIkDXVYqJaY+W0WmPx+WPjZfN5gQqFV9bT+OISmr8vA++53T9keTbbM1TIke5t+GOv8AE/lf9fX/ANz+zDL4Z4TXoU1DOoIJMjm3+dtsE1BKtpeozmYLs1QA9DLE/OAQP54ykGhCqeyXKgT+kVo/g/sxQr+zbKf6OtmKh7Iqv+JAgfjjUTlFJuo+sufxJtiPMswICoGHVncgDtChSGv0t8+mCAyl/ZnCsftSZEDXTFpvNjECTi7lfZXSYAu1dL3BNM27yB+UDGgZg145dEelvw6xgNmcxVU8y+t5xKWXp1QaFl/ZlkwY/Sqn+4f5DC1448JUMnSR6VV3LPpIbTYQT0AONBfiZHvD8MJHtEzGqkl5HmWuZ2O4iPrONDK5OjOgb4OVijhU1HVudhb+/rh0ocGqOOVG9CEO31GBHsv4uaNGoBSZyakyNAgaRbU1x3sDh/4n4gV08pRA0iKhJRywIM2mxEiPy6YM6XLB1JAnLeGqoANSFHeoyD+UnE1bh1JRJrIT91Bqn01RA/DHWSopUYCo7Ad1TUxI+o9f+eDmQ4TltS/Z1nO/OCkDqSGVRHoCSflJwkU5bQepgTI0KfvNRYgbEuFHrJgCfQTbp1xbpJT1StKkDvITUYEk81STt2XpaJwez3Dsvo801A4uOZ1GlgCdAAAURBt6fiNqUIVH0NSYmI0PvexAWALbuQOYb43TkvRtgjO5jU1xPbUZ29ByA/Jf5YjWqYsbR0sO3SOuO+Is4uqwBd0O69ZtuvYi2IaNVGtOlgNnsDebHp/FA9cRfV3JSTO0qHqT+eOnqM251RcFoJHyJGofQ4+rRfVpCtO+kAkkdxAMj1GLWX4dUdiumGWNQchCuoSshj1vthE53oVWU6ZgyNIJAEgAGBsJAmPrjpzq3J+pLYIvwh1MOVpgkgNUIVTAkkaukYtZTg1J1JFbXBiaYldpsWF99xb88N8PJLkNNgLy474kUDr/AH/ri9xPhr0eb3kPxCbT0Ydydt8QUMk7+7Tdu2lSfyH9fwwjjJOqBVELoP7/APOMfFqMh1KxB7glT+Nj+eCNPgOYN/JaPUaenrH54kp8BzEwyoo2JZ0EfMBv6HBUJehqIaPiCrTSDpZQPjE2G46dLdcLlCsfJZyqEqURYpqASQxM2Ewqm+9x8sM/EfDVRab/AGlEmNMBzNyAegwCzuQdKKJazszwwgFtKqCZ7LI/fx6XhLUX1+oJdRXyGaYhjACIhJAasASSFUWqASWi8G2o3OLFDidSqPLYsaYVtWpgQFAueamx2t0kkDffivlWWkiBQS5LmCD7sogsSTHO38Y7Y5rUvLphCIapDPNoUe4v1989PcvIx11F8C3JFRsrSrMgNEGoba110iWNgdKl1drtfSsmO8gnw85VQi/bSNTAElwCbmFQkXJ+ID8LiDT5af8AiOO11Qi5/ecW9FPZwR6hQCgVWAJ/0YPUjdjPwr26tA21EBwTGUmM9GqjqNDB5t70wBO4WSNupGL2TywqBiaqqF+82hT12W0Se4PphEy2VLGSTpS5YidPSwPxE2A7m8DmE+X4nWUhEJK6jppt9puTAE9QSAIA6iLziUsHox1kG2rkEQgkBjqA5YBA7yeYgfPFvy9io0iDv9LxuSP64XMv4kFOUdQzao8xOeR1tK+twx+sXK0uNU6ommwYqeZJGs2BELEncdtwfnH4TRTrTCAoAAC5iwGy/gMd37j8IxX/AErmIKsqru7Dl9YO9vkMTB5AIuDcEbEHqPTGqgnwj0xG1+uJQfXHMemMAibEbrNt/mJxZIX/AK45NQEbf0xjAjMcGptcpHqpj8tsZ37U+FilRpMGJmpEER8J9carUBnGd+2RIy1H/an/AITheiN3Rhd8AH7Kp+//AEH54a2cKCSRpF5JgCOs9DhT8BOBRqaiANfxEAHlFrnDlw/KlkqM+hggZmXZSofQEYkNLtyggCxmewg8UpzdE3yT5YsELseQkKrEiWbsAbsQskxsAe2C3CFppBp0aK1CYNQgiVO45dm2jp0gYA5nWrs5VYqEx5fu+oUdABHZh8Q7SUc7pi8r3t17xhZxlhlceP2YU65HVKCtPmrTcn9gWA2G14/rifN1BpJMQASQewEn8sAaHGdCjUGYWAgzpHoIvHp672wZp/aITBCEXYkBSpG+qYj+8Y6ITU1aHsr5nJFuaGhdURCQRIkEiTJXTEkHtj3D/DarUNZvLblK6CkrOocwDCAZEWkQZBvioOKUqbhkru2mG00FBpwzX+0eE0aiZAMCQbdfZrxPUatApKgUE+YdVTkjWwgBQpPlxYtfTY4dw3ZgnnnCMH1pTI5JlllZ1aAqDmkiYsYG5wKzHGaDiTWqFVYN9iiZcSBIJ8xjWO8bXI2wD4941y9QEKrcra5blFpUWMVLz9zrad8KOa8WKQBGob7WPW+qLehUg+uGihnD1dD6nFqTkvTywZ4MPUFXMXHRmdqaqCPUjF/hfiGmVIqMtMQGEinTQdCF023uAWY+uM+8NrWzpIUrTp011MSAoAkmAECKCSTuMS8c4cMpmqaGuKmqS8haZFiBr0sIEwYLXj54dY1OSitAbhGLlz+w7Z/xuAsZOpTfk5jGoAgCCCDG5II3tsLEja/GczmHOjM1WBuEUVCRqvphV0nTMb9JwsllL1HosrgKqalXlE+YxB1PLEaZnWdzPTB2rnX/AEc6qeXAAgKXqZinYwYDOtJR10h2+Z3w04/BlS2SvrVk3Ecs1U6naqp0KD5q6JZUVSRqce8RO25OKmZzS1KxqTT5n1af0zLe8T7sByZJ/n1wJzPHcyjaaTZekLEGjl6IlWGpTLKxupBxHWz+bVKTjM1JdSbLTEFajLYhJ2VcUUMmhOrHuxgy9WMwKo0FtZcAZqh7waT1nlYj8seyuXNN9VMNWIUgGk9GoVYggH9aCSDcADcDAxePZvydVTMVH1OUgwLIEYnlA6uBiDJ5x6jhCSy3LCp5VRAqglmIeix5VBNiD0BvjdGSgdUA5SJonVWWoAt1StRqqpaRGs6SsDf3rwB1nBbK8Uy9ZS7UoC2nL1vM7i6AxAAuHJAsIvhMyHGKoYLSooJMKKD1ss1zYSlU0/8Adj6Ys1uN0nb7USykw9WmtcDpy16Hk5gDsdLYEoS7oKkuzGjO5fLvqrLWkTzKaZVtRuoVgQosGNw1rzAxSr0PNfkNoMAwAqrAC35hAM+6fiJNzNah9qPs3dgBqhWGdUSd9P2ecT3YvI5YvEY6pM5VkRQ4kljQPmnSPdD0mC1lUGTpCPP8KwqddxmiTPUiv2YHInvEQZbYswFwIsAdlPcmeH+yXTH2jCD+wDbT6OwMHsCBuTpky+YUDUpWo6SogSaQMEkhhqRjAEED3ZPTF7IZP9JaTpEzcwNTGLKZnVE7699h1a6W+BaTBFDJrGt50gxGxY76QewsWbp8yJrZjLtWeCAxNgBYAAdLgKqgbg2F5wf4twuoriUZRcLblAUzGrYEk6peJOoyb4q5hfLXyx1949Gg+6s7qO/UqDsBgqSkaqKGXz1WjK0qmtbTrBYNE3BtUG5hi09SOgK5HjYRIqKaOocriasxyyzGX6R5jqRINzBxVp5dQNbjf3V21EfyQGb9bgRcrWem9R7cxPaBsPoFUADsAF6AYDimFSaGXhGbaopmpTe8jQS50zYlyYbUINlWJiBgoV9P7/8ATCKz+W00HIeTqdSV1TaANmUdNYM72FsXuD8QalJemi02bmNJFpy8AE6JGowBOk9rXvKWPuh1IatPz+uPkdjgbkuMrUdguhkgFWpsahJ1FSrLoBVlgSL7+mCNUEWKkHE2qHPjA9ROM89tVLTlqHKRNXr+4cPxrQYtpi5ILX9NJDLbr9pt7uM39r1T/J6ahYHnFpGkKSymYCimTeeZ6Sm9mYYxgF7OlLLUKkK1N1ZWYMwBdHWSFIIhQ173ItjQeHKGSop0VDoJBBWUFPSx0kA3gGxuBYxAGEX2b5cim1RqYqIXKqIUnWqqbaoAlTuWG3zw+q5Rw+goFglS51GbEEKsCxizGZPacPAVkVHLaZ8s6xHMh6gd1vP7wmJmRjlMmH515TuyzINtlJIBt0JESvMRJwTrUADIB0kyrqI1CeWRYSR2iD0x09KdwtQD4gTq33O0dDJBE9LDDSd6YKK+dzIyqacpR89wJNar+rSLk6ZmwveP3sUcw1UVqbZnMPXqliNFFEYLAZgZqA0kIICzEx8RvNPj3F6dCUOpqjpZYFleVBPSCR7xgRBAJI0hhnWrKqFlp6QulHGlLfDvAtb7SV6yvURx1qILS5GDP8W01AF8qmIcRTX9JdWkEQWAp02gkxpIExeQcL+b4gTmB5vmaTE+e9o2JNBLOQCYAgT2icQ+fVp1Occy2KVFG3aIkAjqsW2OLXCuHVDmKeYywRlRv1OlVKypBDEASImHG/YEEB5QcFYIzUnRDlvDubzVJBoaNIh3dKaAGI5eeoy2F4XoTEYGcP8AChqAxVUnTPl0kqVXnoDpTQD0uZnoca4i0ksaYqTJCMgqGGmVIMwAIFjBBEdYv0c/mOdKWXpUadghEAkRclNPKVNo5p9I5ueE5K7r/BaUL2Zn4a9n/EfNSp5RpKrAy1Q0WImWUlT5i6llSQLasM58I0fMR8xmKClbstBGq1Cbe85ZmY2ENpBF/nhmqZGtVgVahMHZQY2IO+/TdenzwH4txHK5SNVNqhJPuwQrDdTzBVIBBjTMEGMOpZJS8of7cV5mUsxwnJVFZaVR3RzOtWqVHJXUgIZ2YMBJXlIFjYRafhvhKkySylmvIaSbknrigPGb1FZcvRSm4uqtL61AOoKBpGsCGAgyAwFwNQEeKK9QkVqzmm4g6IQr1DKFiY+6bMJB6EVXh8juyDzQVUgj4g8N1KaixLUwECgSSlypiAZHMLDbT64o5vKj9GoiAKilgQz6TcsWlWAAH6uDJnU22k4CZ7hwDkVArEgENuGB91lJ3U9D9DBBAv5pNK0dJYK1IGAxAlS1NoAtuk/xeuOlQkklZByTt0Xs3lQaFFE0s4JZgrBiCwUNqAMSSoAibLPXHFfKeRltRVg9aJMEBUVmJU2tJVDffpYHVT4pRXyqIcSxVqhLHVAZtKi/TSmqP/EPfFerk1oDSk06x5nKEoUtZLEHV1btZbFWkqMqW+4G1+wQr5XyE0k/bVBDAj3EIuAepadJPYMBIJJpZploKHrA39ymZBqEfK4pjqwufdW8lZRWq0wHqlajmGRaiy/fW7qVeCNgxYtvAEFp+H+WNVTOqhqvdG5lhfhBRVOimB7otbpHNhJuajr39B4KLe/f1K3AuMVqgdXUkTK1GEIt5ASkeQbkTeBGxib2YykBSeQkyFEuQsWMO3JPQqymL7QSQpEKgqStSfdKw9NbxciVLdkm27dsRilqBeoTpJN/ic9Ynr3Y2HqYU8T8RNca99/X/J7uLwWHo3u+/wCPezpHqVVBYfpASJNRGby52K1VIr0yQOjOAetsc08+jgDzSsSNNcl1E3tXRdSybzmKRnv1x5KlRmHlEpAMBSVCr8UmdvvMxv19Ia1TSV0kuVmXJa8xZdm0iOpuTMDbBjmT5X2/H/hLJ/T3fkf+H+Q6/FalOkKTl0FT3fMZTTZdopVAWptMm2oHbl3x3lKOpuYqkGHNTUBLRZhI1G1tQJAmIEnFH/Bj0ENajVU0mXVU8uAOaP1lFwEqA35yqm3rOKaZpAfLP2RW40K9SjFpIpNFaiDa9EsncWxVeZa2ec4uPIy8X4K4hyVZGHvqQFEQFBBMgaZusgRsLYGV4VSE2NmcfEd49F66Tc2JiwXrL8QajTiSgqtZ/MD0n9KVRYRmO0PofYBdziRWJ5msElZYMe009MrqNhINlF7WnK/qB0U6VAQHqTF4HulyN4PQTu0HsJNsRV9TnbawUCAB0VRf+ZkmSSScXczSDaTrF7GSFURYAgtYRMaNURdUGO/MFMAD3iPfG0HcUyN4kgvvIIED3ipWCik1EUrhiKo20sRojuQeZu6+6NjJlRJwviLNXVqyryq4aqiXhgIaoo2iPeW0tOnpjhMtqBZjoQEc8A3jYD4m3t6SSBcfM1VkaQNKWMA3JE8zmLn3rRAi3UnNWZMI5zjJSqqtTbQxhWQLUWCNSvqV5MqDaBcjYTKX7Wc4HoUREHzNUSDbSRI6wTMGBMT2lkytI0EZQomoBpUaVKMbCpEe5eCp3DAqNzhN9p1DSiAswqCqwemxp2IUDUNCDeB73puL4lKI6Ze9nxX/AATmmiXo1mrLvAK0CpLRuNJYbi+n0BbalMhT5tYlV94MRRVd5uCIG8guZGEn2ZZ10y1YUm01PMBHKHOwnlIMyJG3yw0ZHJlQ1TMDn8waHqRrAdEMJGwFQOugCw0CIIOBB9gtBfg2ZNT7ENBg+U1+cNJCzYEGJBFtWsDBarSptR83UBUVpOm0BrbQDuRtHfCt5nmH7MMD7waofL7SAAC82HvquwvbBnJ5xHQRasp5okzBgsL7gwCAbBpFsO13ETFvjx/yhjMnQBLorDSeZVUMCIAa56sz9hgXUy6P18o97sh/myf7w/dGGriaM4Vg6kKYeYiDcEhhE6pWT1Zb4qfoAIJNJgPvU9p3vOoRE+7Ebxh4yoDVgQ0WphUzKM1HoywSkiR5bTFwQ2gkqQZi4OJcmBlnTMU6qGkSVLM6qV2JVhvqIuABqIBOkGMEakUFJ1hkYaNBWJ1SdJlSQliSVv0sSDgPmsrmP1hKui2hQrUwPukCVA9Gg3nfDp9WhGqDtb2hcy+XSUrylmJbm+8FBCx2BYfwjArjnG82W0tmHNNhqQp9kHQzBhI7EFTMMrDpgb+ipU/V/Z1P9Ux5T+47bfuufkzbYscOTXOVq8jaiaZfl8uoRdWm4VwAD2IVuhDVjjhHaQjlJ8slr5+rmKGk1ahakvMhdir0x8YWY1J8VrrDfCxxR4fXCyjgmk8BwNxE6XXprW5HQglTZjj1PXSqSJSpTbruGUwQR3BBEdbi+CT8P88q+XUAOdLU5AFN4nTfZDBKH003K3pSX0E2/qDczlWpPE3EMjqSAwN1dTvfp1BBFiCBazOXFZDXX3hesoEXP+kUbaSfeHwsezAC9R4bUhsu4LaZakygvpa+pYA1aWIIIIEMAw66i3BeDlNTMo1hzJBLsEuLomtbywIbSCJmQSMRy5446vkpDE5K+wsZSqpXyapAXdHM/Zsd5i/ln4h094fEGtZvKuKCqynXSrOhAEyrqHUgixWUqMGFiGnBnLcFSQyJrUBtRAJBs2r9WXCwCAJqqbd4I+NnaQIUFaUAgVPJpMguSQwIdwCSTOtt50mcD4mSXmjB0tjOOKCpyt/Lj7v8C/l6ZpBapU62aKKaZlpjXEXCn3RHM0bhWGPir5TQR5lcmAvvhGJ67+ZUn4bgE31NZTlXO1KMeZTpupBCsoVNSnco1OFIM7wwv3tifLcJo1kf9FcUqhnUkc4QD3V7iN9GmZg2tgQ8Xjm64fzJdEkLbMKRLMRUrzJmHVGNySTIqVJ+ag76jZfnkgfaVyx1cwWeepPxEmdKH75kn4QbkWszkTlt111BJmAUQA7xfWbgyRoGoe9IIg8iDrzBYs3Non7R56sTOgHuZY9BHMLqSfD9+/fcDi1yiChSdmNRD5IWAzrKIo3CmJ1T90hi1ze5wc4SxzLaCQXUBVYlUZwLWpTpn9lSBfAsK9a50pSS3VaaTeBuSx7DU7RJmLeNcDkoA83KXI53m2kATpU7aVknqTsJ5McZqqLYc88TuLD2dyzj7NEbTIsAdTHoWESZ+EAae0mWNdgtPs9T6Mq/0dvT3R67CLI585aBVPmFZikGuk2JL30N+ysnuViCRqvlnpmus6QQGU8hUkWDRZl68hDRO5NuGeCUeD18H9QjJdM9e+4NXLl5qM0LPM5uSbGB1ZtrfKSBfEZKB05ORWBgwzG4JMn3XPTTGw3uTcqUqlQhiVKxZwQKYUdiLACdheeknHPmBLUt/wDWEQf4R8Pz9792SMRTcWdz6ci7P/R9ztTyajCkxGpQWVwi6+6VaZHlMY6NpM7G+PUM1T2BFIry+XUZhSE/CjsC+WnolQNTtaJBxCmT5QzHSp2tJb90dfnYDv0xSzXEaVB1dgoEaFVvtGYGQQAwIIMmV06L7TGLxy3yt/L+ff3POz+DjFXF/f8AgaMlmVpMQ1PVUUS9KqukovQ6QTqBj9aCyCwEnBjPeRVp+ag0MCQybK5IgCQCJ2giCA3QYX3y0BVQq6galpaygUsCA2Xrai+XLXGl2ZCTGqeXEmWqeZy650QhDr5TUyTGitSA+zYzZ0Ghz0VoV2tSOJxcdFjMZZngiICzY8qr1uYAHfVDXBMwWxEdKDkEsPjIiPVQdr/G2zdFkEzBKeoMEDML62lWO8XBlbkkE9TImSplVGUK3lsrMbAiSDGyKOsA394Q3uABcG60KDzkR79UxM7gsxmSYU3NiTLWifeF8IvtMquyKWkhqpYMx1MZB3OntA3g6fiicaIKA1HWZJsVHP68xiC0/DeDuvXCJ7U8yrUUVdMrU5gvMRKt77X5jB5ZtpMDeNJ6Mg57D8jqyleoFLEVogQPgB3P8oxofEOBrmKISQlUOrpJkTSdWZTADQwlT1hpwn//AA+P/kOZAXX9uOW33B3tjSM5k6PmJU+NWIEMZmJNgYLBOjA8sjY4jwOZxxSoyV3oqoYqFY+awUqH1ALI5mIKEQpVWEEGCMV0BpnWWZaoEgQEWRtpnmXrcs+5+j5x3hdI1TVN3qoE0loDqtxpPwOpYlW2lyD70jPKiVB5g81lpLWelGlkBKkMNRWWFQoQ0QnvH3gJxaMrEkqGbL16eYSdCivcMs6PNU7j7qvsdhJuMLOe4xSy1c5eqlYSJU+WNLAGBMNqBDCCCvKQfr9blUkIq92TSV/jAOkT6hfngjQzSZgBcwdVOIDFNUaTBI1DnWwnY2Xci5cfQyfqRZXiVHNorI3nEHolRbMIMkoPur364lqcPRSWUPTcbEGJPzGmF6Wvvj7mOEUqTq2lbiQyqIcT0YGfnaR2xceqqyJeDcHVuCN/d3/qCOmFjLsNOFbOczkcnWp/aB0qDqFB1EbnkmZubgemBNLhSvSg6nRQPs3BFRBtFOoAepA0tKX2BuCjZv8A8R/wB/rjqlnApDBidraEEj0M79QfQYq5y7E1FdyrnOCqWptmCpcqKZggFmEhCzEqmoIVE6TJQTOKlbOUKJak6KHVSjIAxj0JYU0DGbkI02+rHnUU0xqfWr3kHRfeCAbbj6x1IwvGiG5K7NpVfs8xu6RsjkXdLn1XpIkYjDxXmayJ/ROhZ4teXn57CDcSpi3ml22VKYLkC5JGpFotb7tKYkasVKPFg7MAoGxVan2mkjcpqEIT20j0g3xQzHCalB9LkI3RgxhgdmDSAQfr64lq5mms76yRCBYB6d4ttYdBib8U1+hV/sRxb5Z1xNq1aZqubQUPpewHLv6A4G1OGCBJGruzCPSCdv8Azf2YvUc+C2hwVYd/T5wfyxLnciakfe6G5B/mfqB8xjnnOUuWFRQKy3EDTBpmKlInmpt7s7EqQZRv2lafmLYIZfILVZXysDSAWpltFXl3IZjpYno6RFpVeozM0GQ6HBF/uifWDuR9RiJEZTqp6uU2cSDPexsf4sJ9QpmiJwus9GMy6ajAVl52BOxPKVkG4KwSQJM3wv8AEfDo1PUKMYYfeXWzQST1CyxJkhrEarTi9wDxpbRmTPTzQpMEzGtR8tx223OGkUQ6AgKyEfCQwKxspIIiem3546scq2mXU01XK9GZVncpULkVmRESwIsqTfSiC+o2MROxY7nESZgjky6sC1tUTUeegj3Qfupc7EtjQa3hunoYUi69CIEEkEmQZAmY6AXiNUlb4rwapSXTSVU1yDoJOsBdRmoY0jcaLKfnbHdjy9WmQnCtoA/o6U/1kO3+rRrD99xt+6t/VTjwSpWvYInySnTB/IT9Wb9o47NKnTs0VHHwKeUHszj3o7JH73TH0UqtcSYFNPklNJ7WifQSx9Tit9xK7EIzHlgrQYtJGtmH2ZjoEO4/aMN2CETgllM4mnUyhHMwKhHlkC5ZCbPG+ljy/t3Iqlqae4oqsPjcQg/dQ+983/8AKMR1Mo9YGpUPKd6lQ8vyG5Yj7qgn0xHJijPk6MPiJ4v0/bsV8xxepmHK5YGo0w9Ugsq9JUfFA+m3vDAqt4PqtUL5ioBqiXa5JIFlBuSOw2joBZo4LmaOVZvLLjUINRvdBnrTWTp/aliLGNxi1Uo1azM0EjckkEAESLr7ykDUNAMySAZxJYlF/IfJnlk2weSDTFIksAINRwC7dwxi1xtc7yx2x3kK9RSoYk6AVSsV8w0lNjTqdamWOzU2nSIKxGk2auUpruTUb7vuL6S1yw2NoIBEkEFRbSi9RdJWE7AAKPn8O3xMZ9cO1GqRO5N7YUyNZiAQAHLMHFOSQ1mMNqPKUZD5gguG1E80Clm+PZan5i/pKGoxVTSDsEUEqGOoKyiFBJAubiAbhf4+DTprTIZwOUeXUKKVMaRUGgh9FwsEiIHwqcUuGcGBQucvUqCbFCsQAIMaQL779TibQRgXMZaqNNXPZcqf9GHWkl7EFSZYGdnZh+GFH2g0qIoFqTUmBzAVPLZT9mtEX5TYeYXxczGXy4s2VzS/wUz+fmA4XPEoo/otI09epqjMdSkCG1MIPWxA+mEaGQ9+xSnUGTr1KTaWWuD6GFFjvIIJG1pkY2zL1BWpK0RqEkWMHqOxg27Yxb2AcQTRmKB94uGHrKwR+Ck/Q/XVuH/YuaeyOZU9idx+P5/vYUJaqHyQdbAoZIsFAgSRJMQfWLk4HcY4WnMwRCKsB0IMVSBbVp2YKoioLrp6iADFQOabLKmoVJB0toEi03uAbkapjtbC/meMmjRpCtVQ12TnWkpbUwADFOliR1PTARjODwhtNSsVc+TWqI1wxow50E04gTTK86mDeT1x5OI6Vl6i1KRN1fWrGPuldR1gSRobVvbF/ifF2SoamXdzmAsy0nlBGpSguQZ9xlAJNiDBwP4bl1zdavKUqOZco1OhUlVZSgDLScEEHzFdghMcxtYnHRCafJOUa2ghTzhWXKE0QbO4VhvA16bCTAlehkxpsao1kqJFF/KJJhCTG4JKsu6kQb3G9+bCYB5NUqyVKLg6SjgVAx306CAXmCQFLE7jFylUHMKWgMCCaIBdmvBgKfLFpJVZJBGqCIBljQI5HVdgrXzDg/r/AJg+bb6FbY4GaYW88GZ6Pb/cmD6TjuhxQFUStS8xV5QWkMtjpUVDBDE20tExMRc85TKeZqNOklrqjsyMwk7S+kxF4OBXqGz7wTPrSqxVdXSpyzpJ0yTZiVB0Sx9F+RMXs/4XfzAKCyjRbUAVIJMc0Ar1uZkkXnAzMZFwYbLBf3wR+ZMesj8cFeA8WKAUq5XSbIdaGJtoImY+lhM2FpZMakNfqT5Hw9NJqeYcMsgimqmabP8AEjmAtpJAlW+uFHj3BqmXeGbWnwss33seoNjYn5SMaHngaa6pbQiEG4BAnUzF2IPuzJYmYX3SNWOszkw3mawulhdWURpYKQsjc+YNUgyC0djiDxqjShasywtba5jmMyI3sN7Fdz2+pThHFTl3AfmUj4TO9g1rW+fTFnxJ4edB5yF6lM7zdkI5Yb5RGr0v0leQkTyqRsZvHruAMRap0SemaFTztKqGIqLoidOlT331LBueojeCLYUeKZbSzsnuE7AyBedJ2EDYGDMYoUapp6SrAzubkp3nYR+O1sE8jm1qX+L8fpflHy2wW75M3YJNMuYURbYsDtvBaB2tf8Nr3AOOVssZpnUpN6bE6T+Ox9R+Yx7O5AGWUCeo/sJsD6fhga7yIgTPvXn5E/8AI4XgA4cU4/mM2Jy9ZgoHNQQaKijqRHNVX90yJuvXFLgni9qYCVQatLafiA+Z3Hofx6YVzKtKtJUiHU9dxzHY/LBmjxFMwrLmAq1Gj/KVUm4/1gESTsXF9pDYKbu09jJtsZM/wyjXU18uq1TvEkAQJgoIZiT8Jj01DlK1XylV71TpUbM3JTAN+QAQZF4QE+mIG87JOrKYLCVdTqSoPQ+6w9D6SBg9l8xTz6kldNZJZ0SJcco1IWmNgCpkXvMgjpxeKadS9/QooRn5eH759/kCl6ae4vmN95xCj5J1+bEz93H2vlnJ1Zh9J2AaS8dAtMXA7A6B2wVoZdgDBSiASsqSXMWPPBYXHQKMdU8pTS4BYzueWfwljf8AaGO3rJdILp0tvLphez1OZvoI0r9L/tHF/I5VlHlVWfTDMkxqB9510kglSObsCv7Rxd8lhMFacxZWVT6yZLn5EnHynlwjFgULAGFLR740k80CApO3Ur3wjlYyVHbBBIRVg2GoSwvubkE9oAHcHpz5TsswzDoSOUfImFA+UYsnzihq09CILGDUgdJ06bW6iO3fAp84hMtXBP7KM3/FH88IrYzLK5FXbS2k2JsZJCgm2mR06nBKn4Ay6KFY8xc88BCWdi0SO0wB2jEfhXTUqwivUEDUzDSFAMm194Ajrt3hr8UZ9svlalRFmrEU17ufd+gNz6A4Sbd0NHgxLinEKSipoOdXTqUaaxKynLJBZbTB6yDOAvjFwcvSAqVWAay1NG2kiRpYmMNvDMjTrI6VlamwqgzGguNWppWLTEEqQOebnAX2mZFVo03RQqmppgTHunAb0aih7M67JVMGNWxAvqXSykGOl7T1FsfoLI5kZqgG2Yi4uIbv30nv2PfH528FZghSrFjTL8yqSpIKgdCJ6WNrDG+cIdVValM6lIvedQN/qeo//Y4mpeahq0GspTSrSDuXaOVkJgKwMMCF6z1uDuLEYmznC6dRAjoukmfs5Q951KQ3SLd+04WMxxCtQq1KopecrR9nTKqXtCVAWIAOk6Wn4YvyibfAeN161MtWpCgfMgIj+Zy6QZLQBqmdoG2GfqZF6h4coUuVFCjcKgAJ/Df54CeJ/DNCfMABaNJF2IEzYCRE3vcbzgjUzoJ5AQOpJkmf5fnjrMZVXUo3utYx/fvhU/QzQjcUavqpeeMy9Cnq1OgYMKbAqQzGAwBKvDTIUzqsMUM5wF9Hn5fyc3QBkOi+W9Mi8OqFGBHrMbwuHjNcPrpUBosRaAADoPqw2B7kQf3oGA2e8MV0qCvlKi0MwRzoiMKbQfiBYhVI9CsyQCxxeGRxJygmKw4oSAW85abUyPMBbS2raFIgoPvEFz0gw2DmV4Ia2W8yk1NQLHS5r0iOzBm1oOkSB0M2gLka9HLKmV4hlKuXqoukV8u0MyiwYgWeBpGpTUPoDbBA02o03zeQztOutMDWDAqAEgAOGUsQJkg6TAMQbiraktaYlNckeczjoPJqmpAM6fxJbS06RMAaTBk7xb5QzmWACumoxAOpqRYyNgd7enS/pbrKaYUZnLkMJNSqyt9oTHNqtpIiAqkoBACgARA9N7Gh5NRTsFWizDcQY1XPYEnuBtjbNaCuU8SJRIp6axoxZngsN40wLrEEA3AI+WGDhT5ZaR0MagiVklSoWSEBIEKDqse7TbGevlmMEMqTzahVFPUSLmzAsuwFiDGrqIhamVgmvI6oAW1Wggs6REW3P0wjxpjqXYb+KeKnHmUxTp09OkjSfMHvQwJNtytoGzC82AZ3htPMTUyw+0W70NzETqpCYI7pcjbtielkaWZjyKrCoQZWtplisNAZVWYJgjQTcGwHMFra6dSNLU6iHuQQekEfjIsfrjhypwlT4A/mVaNa+wkbAgP1vaIFvrjpxZmBAYbLubm8dIHa5j5DBXQuaANQhMyIBZjFOuSQAG0xpcyBI369SKIycFkeQy+8pGmPpae+4/PCVX0NDHKTpEuT4kTapc7C2o/gLH5b4uHh4qshUEszBQTtO8ajCbA2JkflgvlMnk0UGkHzDsCBIREBKzzM80wyQTcP1sYBHxuOQxp0Tvc0smoFwB/pCkXBuaaCCSAd8N062yixxX6vf8lWl4TSlpOarKmphAHMSo3ImOp06dJM3AOJOJ5fLCmoNL9HESDWch77gINVRx2lUj0kjFSrnjTBc1BQVjH2INao0WK+cWIB6keYpEzpxQ4dxejTqMwpGTs9UCuZ+8QCkHYyJIvvMiuPDKS8q0H4yxvy6fv3svZRglFxTpl6L+9UzZFKhO2pEmdXZg+qYtivwjimXypYqWqVGXT5gTkWb2DFXa4EkgW2GKuZbM1arVqdXzHP+pdtQHYU2irp9NJGKL5wSRVpITcEgeS4/wDJCz+8jHHXj8LFbls555ZSdsPDPio0qBUkkxTraWkmT9m6Bze9gfnihmeKaWIIqqRPK7wduvIDYg9t98UKeVpVTpps6sdldC4ntqpgsf8A6YGKmYrh69ECmo0UmIVSzrcFgQCxuNUwNjexk4rJJGjbD+fdoHkI5Y7l6nKo9eVTP8+9iD3lxRpBi1SpVc/6sLTSZliJkibgljIFgBAgTn+P1avvNqAFhZVA7BVgEdib4GtVZtyTH5Ez/O/54n0OvNwdHVFV0rYzZ3xdV0CnTYoiiAtMkW9X3PzH1wtnxNA/zRAP2qr/ANgwx8G8MB3pio06iOVfU9Sd7do+eDz+F1oE1FpLWAkhGBbcQYhlIbYBgbX3winC6iwTjJLaOfBftBopSVKmWNIEFtdM61IEXOqGHvC3Mbj54s8Rzb16vn1DCqCESeVQSJnuxgSfoLYo8H4BocVTTVSFZYQGWDNqJYsZJFgAIst5O13MZKq9VfLXlKmDJ0gmbhlBKtYjmUi4EYSaXU0mCN1ss5SmzQGFN6RMEiSV1e7GkMGJMAklQBf0wk+2fhvlZegVY6PNI0GYBhjO/qR/XGqcP4aqc4polRlAcrzExsC+kFok3IG+M/8Ab1/mmX/23/8AQ4n3GuhB8KcOY5R68SgraG9JUET6G4+cd8aN7POODV+iMZIBdLHaQCDaJk6h827AYoexCitTI5mm6hlarBU9eRf64ds5xbKZMeWWp0uvlosm+0qg69z+OJONSsKCOZfSabRqHusAJsO3qNQMdYjriLJcSy7s1Kk0kLrMA6YBAtqgwelosb4rcP4tTzFE1KRJCuCNge14JEzpNjsVPXA3JJ5efdAgVWZuYtOoVBrGkfDuJG3bFY7QHphZ1gkeuJaufakabCCDYqeu3XcHf+w4hz1XSGYgmF1QokmBMAdTaw7474flKWbprWpVw9OLaQbMJsQbqRMFSA222Ep9h7V7D+QzSVRKGDElTv8A8x/e22J6tFWjULjYyRH4YWK+SqUiAZBHusPluD/c4LZHjGqVqj0DD5dR9dx+HXDKXZhlj7xPcV4OlZDTr0xWpkyBEMvY7i4+8kH064z7iXsvpNqXK1Adz5dWTGqZioBqHWxBNxJE41dUtKkEHYi4OOHRT7yg/ScPxwSMbqcZ4lko1VKhSQs1AuYpwbT5glu1jUFjeMWX8SpWVhWydFyyEeZRY0Wkj7rdPnUxp/6HvpbSvwhSQeljM9Z23nbuGzvAqNSTWy6T1cKaZ9edSCfnOD1NApMVOG8ZyzUaKZhcyKmgKymmK4LBQG0mmHfT22t2x6pl+FuZGbFKN1qa6V5I/wBMARcEfMHEHiTw6tI0alEVLVSpRirATTqXU72gXk7xYgjFjJZSpuCQTvg9bRulFdstS1MuXr5VlTQdQNNxNTVEM7sNX2d4INlgWxznh9gKmZqJUQAeVVpFWqASR7xYJUSQREkgg3GDdPhunQ0KD5tMTAnmcJvE/FhW4xmZrM1HyQVJWm7xKgGSU1cksxL6txqtG+GX9zysSSpWRVeEkldJD6wCq6hTcg2ny62l43I0lgYME74KnLjSq1KmXZgISpWdS4DfCR5g1AdIBibTgbkcq9GlUrsymtVmnSLVEnmEVauotchToBmZf0wPy3CKlRgiBWYgcquhO3YNjLwsN09CdbXYcsz4eqMabVtVewjTK0lltgqLOmDIICi3ywwUfDyeUQKqg2I0qnlgzKnSQQ0i0tJI/HC74Y8VHLr5WbcED3Ylm+pA0j5k363klv4fnaFU6V8vlgaSUcoNgOViF9BI9Jxzz8NTtnRDJGtf9iSxqI76wrTAZI0gjpBUbXsCCD1UnYRxahljzIhCzBYFUIN91Eow/dCfM4ffEXC28wE6nRrKQpJRvukKLoR6Wj0OpK4rkdIKuhsQItadr7TAJEG5IAnE+qeF1GVlowhOO0AHyCtIp1UaPhf7Jv8AePlz8nODnCeB5+udBWUWP84AcAemoFgI2K6QY3wHrcOYayI5SAxOpYLLtzgNNpJAgTuJEtfgbjVWn5k1OSQRTc2JjnKwJWTBtK32Fzjoh4uUvKyEsEU9DhwzgjZalTWmlINqHmMk05WZYydbHtp1X7gYX+KeHcq/FKI8sDXl6tSoqkqGhqaCQLQQzTG5jqMOWW4klZZWQRGpTZlnuPpYix3BIg4otk0OaFeD5gomkDJjSXDkRtMxfe2F6ndhoXOH+z2gz1K9d2cNVdlpD7NQNZgEg6m+hX5HHXjDhtQpSy2Vyw8nVqLKURVIDC6gayTIuLXuRBlqpExHqfzM4EHxXlPMema6hkMGQwWesPGkwbb9MN5p/Myai7RS4NwiqtVaj6VVdl3YmIg2gRO4J/rgnU8T5NRevTb9yan/AAA4qZ3xZlKYkVlc9BT+0J9OWw+pA9cZfmKhqVqlXTpDuz6e2pi39f8ApimDw982DJlb2alR8SZatUWkhYFjZigCk9B72qTsLYK8Pya05RRpAG0dtjM3Ef36YyDK69QCzqtpM/FNvzj+98bPnMrTroUqrqRtxJE/gRg58ShVCwk3yfMrVSopZGDAMVkbSNxjMP8A4gKUZXLnUY84jTaPcN9pnpvHph9yfhWlQ1tlj5dVhAapqqhR2C61B+Zk/PbGUe1/I5qjl6a5istVWrl1IB3KEH4Qq99PrI64gOc+xDjIpO9BzCVn5Z6OAI/8wMfPT64efaTwEVaYzKjnpCHjrTmZ/hJJ+TN2xjXhExTZhMh+ljsNj074/QXhniwzWXVzGq6VFMHmG9uzAhv4oxBvqk4mM99nucKV6lKbVabQvd6Y1g/OA1+uq+wwb4zVUV6VUsdahJUfEyMQp09yoEERuQZgQCzmUPD+J0TH2QqKysZ/VsdLX7qCyn5A9Rhv4tk1ZCjCQDpP8J0k/wA8PhbSoz2E+JGD8/8Ar/XC7lsi1N2rZdzSrCxKjUrxcLUTZhuAbEdGGDnHs0KdJajFYlJZjpUajpJZoOlRIlogYJHgQUkpfrB6/X+n4YpG07NLgj4L4hSqRl8wgo1m2Q3SrHWkxAnvoMOPzxaznCiCSkkduv07/Lf54F8R4SlUFXXUp+FpsRsR1BF/laCIxBl+I18oCtUvmKEfrQC1enH3wsGqkfEOcX97DOKlwaM2i3RztSiwKnlJOpTttv8AO2/rghxXxEi0GKyKuk6QVLiQN91BX+IHAzj/AIlyS0RWeqpZ/wBWtLnarAvpUGWEyNR0x12wKztcGkjgGDG+4kTB9cT3EulGZR4T7Xcs8DMU3oseo+0X8YBA+eHPh/iTLVQTSroY3EwflB/ljDuCcDpuSXdSykgAHbSR9Ztgu/AQWBYcoBA2JEiCRMgeg7YbqS5IUag+V8x9TWiyg9B1PzaAfw9ZtU8ivpI3+u2F/wAK8SqFKdHNfrSDobfWFkiT0fTeOvzBg2mWKvKQFIOoRcsSpUzOwGu37Q2i+qjHHHqQTLuQJa2gftzKn6Eav4cIZ8H1ayr5bpqQcwYt8RhYhSOjEkkYavE+fpJSWq1ZQQupF1TrGk7KJLWJggHe/QhQy/tSo5Z3pPl3ZgRLK6xJCyomNjqHrGHi5R2hZJPTOvE4zL1GpLTzDUqcKp8tzrZAVNSw3JLRFoNt8Q8Py+aoVNdOjWhTfkcBlDBoJiNJgemDdP2uZVVQmhVlpMA0pEX5pqCJ3x0Pa5Q0nRlqzoIUuSiC9gbtIB3kgR1jFVlaVUI8au7KHHPDWYq5io9JHq03bUryLqwBAksPd930046yHgHOioHRkokGx1mQP4QREbib9cTn2oslIGllEZdQVf8AKgxJZgPhpnqe+D2T8Q5msbNTpp2FMluvxF426aDtjfHmlWjfCjYf4bl69KkBXqLUIsWVdIi0GJ+cxAuLC+Bfizh6OhaQtRQWnewknVHSJv0vvJDCMs+YqZ2rQq5uoyqtGqikKgKl6nmITTVA0qhAB6E76ThvSkpUrFmmR31bj6z+eOaastF0ZPn4FRS7GlzhCCivCxOoBSFKHpBvEiTGB2e4uy15XWwfQdBYMRq9QNjBI+nocNlDgmYqVCiBWpK1nYDSbzMmQQdyoDDuAb4O5LwplsumuuyuFuS8LTWdzG3zkxYGBGIwixpOnokNdcqi1GLvrYKxFwgAczYbA2Jnr9MXs9nEoq9aqwRFWWY7AWHz3gR3OAf/AGyy9StTy9BDUR5HmRppgKCSFFi20SBF9zEYLZiolRSjrqB3B2MGe3fFWqAir4meqcu/ksFaLkyDp6hSNmNgD6nYwRm9LIabMpH8JP8Awzhs4/xN2GgAKurTIAqXPKoYNAuTMb2nHWWyDNyk0TFiQWS/XZiDE9hNvnimLxMoaiZ4ov8AUK/krIgWgzYzNo6fPHYy87K34Ff+KBhlzHDhSktpMm3PfeIA036YqVaop1NEqSVDKKQ1uZJAClpHzsLXkDFX4ufohVih8wdVpjLqrsNVUsBSpiTqabev9+uNO4VVlASIPUAzGE/w/wAAAqNXratZkICdZRT3JMFiNyLAWEiSzWiFYi82kfy+eIynKTthpLSCTMACSYA6nt3xhXtd8WJnMvTRE0hK0yWBnkI2i3W/yw0+L/FZqTQouypMNUpkgsQdlI2QERIu1/h3znx7JooSytqqkghFU3X4iBLbbtO+ILInOkxunytgzwvSZqZCAlvMsBNzp2j8emNg9nvCczRdmdQiMoBVvendTG4iSLxY4DewUD9GrmL+bExeNAtOH9+GhKtXMF6rlkC+ULrCgwAoHMbn3p3P0ZwXVYiPhdcxT8yl5VSooIWSraWMSsidJMAfgSCLEWrgqsHlgWax+RHcbR3GGHhYXyl00vKBnkgLBm8gbE7xv3ANsL/iThNepVlKxp0mAkIoDk/FzkEgGQbQRe/ZqCWkzivTemVINLo0Q6wKgYX93lKweqnEfDsy2S5SC+TB2uz5f1WLtSB+EXTpI5RW4H4dTLBjJhruzG53ksxubGJJwSyueU01dGWoCvvoQykizQRvBBBGGiwNdxmNNKqhlIIYAq6kEEHYgixBHXA7MUCphh8j/f8AvfC1RzTZIsQvmZRparRAny5u1SkOx95qexuRDSGdcrWp1UFVKgqUnUFSI0wJuDEg9wTaOl8O1QpmHiThFNMw7IgBcBiQAPT8zf1J9cX8x+o+UH+n9cNnFfDwqsr6uRVvttv8o+sYT89xrJ1GbL5VzU0oSzpekCpBAVyeYmD7sixv0xKab2XxSrQhZTMIlfMI3KBVJkjl5zqF/rg/SuJViAeqn+m35YGVOFPXzTIkBV0ux9SAJjqTpgdLHa8maHBXpNpNMkH40IAt3uGHyvh0rRKXLO8rWEZddRKLWKkkqGpOadQBbRC6iuiNrfR08L8VatTK1f1qs6nbmCVGp6hAA3WCIsfQglAOZJZ6TAE0q9OmmoxqWpo5KgjtUbS3pHXmKcDrEK1NXKVVas1FjvLO7kMDu0sSQZkXGxIZoVBHxN4YojVV5UWCzN0EKZ1ReAs33j5Xz6r4Y8hmLgtoAMkC/cmJ6SYk79Zxrfhvia57JpVIHOpDrcXBI63vuD6g4rcR4Mpo+RsAmhSRPLEAEen/AEwE60zCH/2OUqhZNPmKriALqwDLBj+8Ym4V4N8oKu4jnYgCTeCBJI6de+NJyFJWySUmJ8zL0VWQbgogE23Bj+5wL4PV89FqJJVpuRGzEGJ3EgifTGbYQPT8J02A1FhBBtF4IMGQf7QbggjDFk+FhPd2xdy2Xq6yCEFOBBk6tXWRERglTy2FsIPOQBDEAJUaPtABPKSUnqQCTafiI6nENPNU4Zsw6jTBYMQEAmAR0Im0km/bBh6AIIkjuQYwE8RV6aUi4GrylLAIObpZI6z2G8dsDuEhz3iGqw0ZSjLxIatKKoEiWSzgSIvp1fDIBIzLj1SpWYjONVqVFOxbQikGwVFgLALEMSZkc22NL4UAaYYMHLczMNmMRbsoHKF6AAd8feI8EpZhYcX2DCzD5Ht6GRgOUv8AiFV3M58NUPJzCVSStAKTL20kiAD94RMPHoYMS+0uMUGstRWJ2VeYn0AFz9P5YXs3wPM5Utpp061EgCQGGmLSygyNzJBIgdNsfMjmFpAVByEoNQieaRuT8BgbH7u8YlLI29jxh6DBXyVStpLHywDKqArEG92JBWYOy2H3m6cUfDrLqK12GqJtEQIgaYi3/KMGOFtVZAatLQYn3gwIO1t1PcEW74usAbYohbaF9PDoYQ1V3ERB0ifSY1f73ri9k+H06NqaKve0k9pJucX/ACiPlj5r73GDQtnIVf3T+WEzxx4kKTlqR5tqpBuAf9Hbcn4uw5byQCnizjoy66KbfbOJWRPlg21sNp3CA2JE7C+ZNTZvive8k2N5J3k7wR8U98Ry5K8qCkfVUk/XaT9LzsOx74BeMRFFB+3ufkcMtDLqgm5J+uF7xwfs0/f/AKHE8SqSDIj8D+OX4crqtLzFdpIL6RtH3Tf1w2/47T/3If8A1j//AJ4yPHsdlEzV8n7Y1pAhMgBJk/bkyfUmnOJ29t5P/wAkJ9axP/48ZDj2NRrHbjHtGr5n9asr0RW0oO3LFyO7En1x7gPtCfLOStLVTf36ZeATEBgdPK42mLixBtCTj2B0q7H65VRp9X2t6lKnJi4I/XHrP/h+uKvhj2qVMkeShqpmfMpmpZj0ZeTkbuRIYRaQDjOsew9snQ9eI/aZmM68VljLjbL02KIe2swS5Hra1gMQ5HxytIAJlhsQftLmf4MJePYD3oK07Q31PG01BU8iCI2qQbdjotP9ME09qNRD9nSOn7tSr5n56A34k4z3HsZaC3e2Otfx9rqVnbLiKppMVDxBpabzpm4Udox3R9oRBcmhJdtRPmQZAUK3uRqGky0XkWsMI+PYNgNA8Oe01spTpoMuG0AqT5mnUpZmAI0GILWPz7nBqt7aiwg5IT387r3/AFeMlx7AMaPwv2qNRpJTXLyUXQrGr8IEBSNFwFtixwP2vvlsouWGWDsmvTUaqfjdnErovGqNxMdMZhj2DZjTT7aM2f8ARoP3THf7wPf8hiKp7Xcy3vKxHYOq/mtIH88Zvj2AY0zJ+1pk3yxcySS1Yk39ShNvn0xa/wAaZzMZf9GVPOZU1mtOnUwE3p2jv036YynHsCkGzZvDniSvR8yilOi9OjUNIyxQFp95WWkQvdgZjmYlRGC9Xx9XR0T9Dpsz0y4/ygrMRy81IQ1wIMQZBjGBY9jUjWfoJ/aDmhP+QIQpgkZiwOp1EfZSZ0EiOhU9cQ5Hx1WJc0+H0VN2qH9ICmYPvHyhJ1Kydeam02ucW4X+rb/aJ/wVcQUv83qf7Sn/AMNXGpGs3On7Rs0xgcPXVEkfpBsIotv5UbV0t8/SYaPtDzTjUOHKvOE5s0q8zEBd0vq1AgixF9sYjwz3z/s6n/ptgtxH/MKf+2//AApjUA2Gn44zwgf4OQzEAZtDuJGynpitnvH2bUA/4MEkwsZgNPqQE9wHc2HqLxiXB/8AOKP+0T/iGIsn7x/df/gODRjRs22cctVrUBDMS7mqu9pJhdWmNNogSo9B88vOx/mo96P1yzMm1/3TjM8Mvgn9YP3x/wCjXxP4MPQbqYy0FzblooU+XVJ85SAVsRMQebltYE3jC54vaoAEqqqnVIhi0jT7w5Ry3gHqQe2KfCf8zzvypf8AqYCYKxxTtIFn/9k=' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker15, 'click', function(){
+            infowindow15.open(map,marker15);
+        });  
+          
+          
+        var marker16 = new google.maps.Marker({
+            position: { lat: 42.77375888461163, lng: -78.78683745861053},
+            map: map,
+            title: 'Ralph Wilson Stadium - Buff',
+            icon: image1
+        })
+        
+        var infowindow16 = new google.maps.InfoWindow({
+            content: "Ralph Wilson Stadium <br> Home of the Buffalo Bills <br> <img src='http://seatingchartview.com/wp-content/uploads/2013/09/Ralph-Wilson-Stadium.jpg' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker16, 'click', function(){
+            infowindow16.open(map,marker16);
+        });
+        
+        
+        var marker17 = new google.maps.Marker({
+            position: { lat: 29.684543515321976, lng: -95.41093289852142 },
+            map: map,
+            title: 'NRG Stadium - Houston',
+            icon: image1
+        })
+        
+        var infowindow17 = new google.maps.InfoWindow({
+            content: "NRG Stadium <br> Home of the Houston Texans <br> <img src='http://nrgpark.com/sites/default/files/stadium_1.jpg' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker17, 'click', function(){
+            infowindow17.open(map,marker17);
+        });
+        
+        
+        var marker18 = new google.maps.Marker({
+            position: { lat: 47.595153, lng: -122.331625},
+            map: map,
+            title: 'Century Link Field - Seattle',
+            icon: image
+        })
+        
+        var infowindow18 = new google.maps.InfoWindow({
+            content: "Century Link Field <br> Home of the Seattle Seahawks <br> <img src='http://www.centurylinkfield.com/storage/20110820_SEAHAWKS_MINN_1060.jpg?__SQUARESPACE_CACHEVERSION=1332868743214' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker18, 'click', function(){
+            infowindow18.open(map,marker18);
+        });
+        
+        
+        var marker19 = new google.maps.Marker({
+            position: { lat: 32.783188557986975, lng: -117.11943984031677},
+            map: map,
+            title: 'Qualcomm Stadium - San Diego',
+            icon: image1
+        })
+        
+        var infowindow19 = new google.maps.InfoWindow({
+            content: "Qualcomm Stadium <br> Home of the San Diego Chargers <br> <img src='http://a.espncdn.com/photo/2008/0730/qualcomm_580.jpg' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker19, 'click', function(){
+            infowindow19.open(map,marker19);
+        });
+        
+        
+        var marker20 = new google.maps.Marker({
+            position: { lat: 37.404108, lng: -121.970274},
+            map: map,
+            title: 'Levis Stadium - SF',
+            icon: image
+        })
+        
+        var infowindow20 = new google.maps.InfoWindow({
+            content: "Levi's Stadium <br> Home of the San Fransisco 49er's <br> <img src='http://asiasportsnetwork.net/wp-content/uploads/2014/09/49ers-Stadium-Footbal_Horo.jpg' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker20, 'click', function(){
+            infowindow20.open(map,marker20);
+        });
+        
+        
+        var marker21 = new google.maps.Marker({
+            position: { lat: 29.950931, lng: -90.081364},
+            map: map,
+            title: 'Mercedes-Benz Superdome - New orleans',
+            icon: image
+        })
+        
+        var infowindow21 = new google.maps.InfoWindow({
+            content: "Mercedes-Benz Superdome <br> Home of the New Orleans Saints <br> <img src='http://upload.wikimedia.org/wikipedia/commons/5/53/Neckarstadion_2011.jpg' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker21, 'click', function(){
+            infowindow21.open(map,marker21);
+        });
+        
+        
+        var marker22 = new google.maps.Marker({
+            position: { lat: 30.323813558160282, lng: -81.63719952106476},
+            map: map,
+            title: 'EverBank Field - Jacksonville',
+            icon: image1
+        })
+        
+        var infowindow22 = new google.maps.InfoWindow({
+            content: "EverBank Field <br> Home of the Jacksonville Jaguars <br> <img src='http://prod.static.jaguars.clubs.nfl.com//assets/images/imported/JAC/photos/centerpiece-660x365/test/_MG_9186.jpg' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker22, 'click', function(){
+            infowindow22.open(map,marker22);
+        });
+        
+        
+        var marker23 = new google.maps.Marker({
+            position: { lat: 44.501389, lng: -88.061944},
+            map: map,
+            title: 'Lambeau Field - GB',
+            icon: image
+        })
+        
+        var infowindow23 = new google.maps.InfoWindow({
+            content: "Lambeau Field <br> Home of the Green Bay Packers <br> <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3K6RjjTheZF-JVckM2s8_YRJd7nTqRBXgmULpAu6Qi5lcA8WVxg' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker23, 'click', function(){
+            infowindow23.open(map,marker23);
+        });
+        
+        
+        var marker24 = new google.maps.Marker({
+            position: { lat: 39.760056, lng: -86.163806},
+            map: map,
+            title: 'Lucas Oil Stadium - IND',
+            icon: image1
+        })
+        
+        var infowindow24 = new google.maps.InfoWindow({
+            content: "Lucas Oil Stadium <br> Home of the Indianapolis Colts <br> <img src='http://www.archdaily.com/wp-content/uploads/2012/02/1328308629-09454-127.jpg' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker24, 'click', function(){
+            infowindow24.open(map,marker24);
+        });
+        
+        
+        
+        
+    
+        
+         }
+      google.maps.event.addDomListener(window, 'load', initialize);
+      
+        
+    </script>
+    
+    
+</head>
+
+<body>
+
+    <div id="map-canvas"> </div>
+
+</body>
+</html>
