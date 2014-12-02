@@ -1,5 +1,5 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="offcanvas.css" />
+<link rel="stylesheet" type="text/css" href="styles.css" />
 <script src="tweetLinkIt.js"></script>
 
 <script>
@@ -23,7 +23,7 @@ $settings = array(
 /** URL for REST request, see: https://dev.twitter.com/docs/api/1.1/ **/
 $url = 'https://api.twitter.com/1.1/search/tweets.json';
 $requestMethod = 'GET';
-$getfield = "?q=football";
+$getfield = "?q=nfl";
 
 /** POST fields required by the URL above. See relevant docs as above **/
 $postfields = array(
@@ -53,7 +53,7 @@ foreach($string['statuses'] as $items)
     echo "<div class='row twitter'>";
     echo "<div class='profile-image'>" . "<img src='", $items['user']['profile_image_url'], "'>" . "</div>" .
     "<div class='name'>" . $items['user']['name']  . "</div>" . "<br/>" .
-    "<div class='screen-name'>" . $items['user']['screen_name'] . "</div>" . "<br/>";
+    "<div class='screen-name'>" . "@" . $items['user']['screen_name'] . "</div>" . "<br/>";
     
     echo "<div class='tweet'>" . $items['text'] . "<br/>" . "</div>";
     echo "</div>";

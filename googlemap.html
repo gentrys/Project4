@@ -12,13 +12,13 @@
     <script type="text/javascript">
       function initialize() {
         var mapOptions = {
-          center: { lat: 39, lng: -96},
-          zoom: 4
+          center: { lat: 38, lng: -97},
+          zoom: 3
         };
         var map = new google.maps.Map(document.getElementById('map-canvas'),
             mapOptions);
     
-        var image = 'images/marker.png';
+        var image = 'images/marker-blue.png';
         
         var image1 = 'images/marker-red.png';
         
@@ -421,6 +421,104 @@
             infowindow24.open(map,marker24);
         });
         
+        
+          
+        var marker25 = new google.maps.Marker({
+            position: { lat: 36.166461, lng: -86.771289},
+            map: map,
+            title: 'LP Field - Tenn',
+            icon: image1
+        })
+        
+        var infowindow25 = new google.maps.InfoWindow({
+            content: "LP Field <br> Home of the Tennessee Titans <br> <img src='http://a.espncdn.com/photo/2008/0730/lp_580.jpg' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker25, 'click', function(){
+            infowindow25.open(map,marker25);
+        });
+        
+        
+          
+        var marker26 = new google.maps.Marker({
+            position: { lat: 39.095442, lng: -84.516039},
+            map: map,
+            title: 'Paul Brown Stadium - Cinn',
+            icon: image1
+        })
+        
+        var infowindow26 = new google.maps.InfoWindow({
+            content: "Paul Brown Stadium <br> Home of the Cincinnati Bengals <br> <img src='https://www.eseats.com/sports%20images/BengalsStadium.jpg' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker26, 'click', function(){
+            infowindow26.open(map,marker26);
+        });
+        
+        
+          
+        var marker27 = new google.maps.Marker({
+            position: { lat: 37.751411, lng: -122.200889},
+            map: map,
+            title: 'Oakland-Alameda County Coliseum - Oak',
+            icon: image1
+        })
+        
+        var infowindow27 = new google.maps.InfoWindow({
+            content: "Oakland-Alameda County Coliseum <br> Home of the Oakland Raiders <br> <img src='http://seatingchartview.com/wp-content/uploads/2013/09/Bank-of-America-Stadium.jpg' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker27, 'click', function(){
+            infowindow27.open(map,marker27);
+        });
+        
+        
+        var marker28 = new google.maps.Marker({
+            position: { lat: 38.907697, lng: -76.864517},
+            map: map,
+            title: 'FedEx Field - wash',
+            icon: image
+        })
+        
+        var infowindow28 = new google.maps.InfoWindow({
+            content: "FedEx Field <br> Home of the Washington Redskins <br> <img src='http://seatingchartview.com/wp-content/uploads/2013/09/Bank-of-America-Stadium.jpg' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker28, 'click', function(){
+            infowindow28.open(map,marker28);
+        });
+        
+        
+        var marker29 = new google.maps.Marker({
+            position: { lat: 35.225808, lng: -80.852861},
+            map: map,
+            title: 'Bank of America Stadium - Charlotte',
+            icon: image
+        })
+        
+        var infowindow29 = new google.maps.InfoWindow({
+            content: "Bank of America Stadium <br> Home of the Charlotte Panthers <br> <img src='http://seatingchartview.com/wp-content/uploads/2013/09/Bank-of-America-Stadium.jpg' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker29, 'click', function(){
+            infowindow29.open(map,marker29);
+        });
+        
+        
+        var marker30 = new google.maps.Marker({
+            position: { lat: 41.506022, lng: -81.699564},
+            map: map,
+            title: 'First Energy Stadium - Cleve',
+            icon: image1
+        })
+        
+        var infowindow30 = new google.maps.InfoWindow({
+            content: "First Energy Stadium <br> Home of the Cleveland Browns <br> <img src='http://seatingchartview.com/wp-content/uploads/2013/09/Bank-of-America-Stadium.jpg' height='100px' width='200px'>"
+        })
+        
+        google.maps.event.addListener(marker30, 'click', function(){
+            infowindow30.open(map,marker30);
+        });
         
         
         

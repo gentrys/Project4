@@ -1,0 +1,370 @@
+/*
+ * 
+ * --------------------------------------------------
+ */
+
+body {
+  margin: 0px 0px 0px 0px;
+}
+
+.body-background {
+  background: url("bluebackground1.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow-x: hidden !important;
+  min-height: 100%;
+}
+
+footer {
+  padding: 30px 0;
+}
+
+/*
+ * 
+ * --------------------------------------------------
+ */
+
+@media screen and (max-width: 500px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+.row-offcanvas-right {
+  right: 0;
+}
+
+.row-offcanvas-left {
+  left: 0;
+}
+
+.row-offcanvas-right
+.sidebar-offcanvas {
+  right: -50%; /* 6 columns */
+}
+
+.row-offcanvas-left
+.sidebar-offcanvas {
+  left: -50%; /* 6 columns */
+}
+
+.row-offcanvas-right.active {
+  right: 50%; /* 6 columns */
+}
+
+.row-offcanvas-left.active {
+  left: 50%; /* 6 columns */
+}
+
+.sidebar-offcanvas {
+  position: absolute;
+  top: 0;
+  width: 50%; /* 6 columns */
+}
+
+}
+
+/* Header */
+
+.team-logos {
+  padding: 5px 0px 5px 0px;
+  background: -webkit-linear-gradient(#E8E8E8 , #989898 ); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#E8E8E8 , #989898); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#E8E8E8 , #989898); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#E8E8E8 , #989898); /* Standard syntax */
+}
+
+.team-logos-center {
+  text-align: center;
+  margin: 0px;
+}
+
+.team-logo {
+  margin: 0px 1px 0px 1px;
+}
+
+.team-logo1 {
+  margin: 0px 1px 0px 1px;
+  padding-right: 25px;
+  border-right: solid 1px #989898;
+}
+
+.team-logo2 {
+  margin: 0px 1px 0px 25px;
+}
+
+.col-lg-12 {
+  padding: 0px;
+}
+
+/* Search Bar */
+
+#tfheader{
+  
+}
+
+#tfnewsearch{
+  float:right;
+  padding-top: 20px;
+  padding-right: 5.8%;
+  padding-bottom: 20px;
+}
+
+.tftextinput{
+  margin: 0;
+  padding: 5px 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:14px;
+  border:1px solid #989898; border-right:0px;
+  border-top-left-radius: 5px 5px;
+  border-bottom-left-radius: 5px 5px;
+}
+ 
+.tfbutton {
+  margin: 0;
+  padding: 5px 15px;
+  font-family: futura;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  text-shadow: 0px 0 white, 0 0.5px white, 0.5px 0 white, 0 0px white;
+  border: solid 1px #989898; border-right:0px;
+  background: #0095cd;
+  background: -webkit-gradient(linear, left top, left bottom, from(#E8E8E8), to(#989898));
+  background: -moz-linear-gradient(top,  #E8E8E8,  #989898);
+  border-top-right-radius: 5px 5px;
+  border-bottom-right-radius: 5px 5px;
+}
+
+.tfbutton:hover {
+  color: white;
+  text-shadow: none;
+}
+
+/* Fixes submit button height problem in Firefox */
+.tfbutton::-moz-focus-inner {
+  border: 0;
+}
+
+.tfclear{
+  clear:both;
+}
+
+
+/* Navigation bar */
+
+.navbar {
+  margin: 0px 60px 30px 60px;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+  background-color: #003A73;
+  color: white;
+  font-family: futura;
+  font-size: 18px;
+  text-shadow: none;
+}
+
+.navbar-inverse {
+  background: -webkit-linear-gradient(#E8E8E8 , #989898 ); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#E8E8E8 , #989898); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#E8E8E8 , #989898); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#E8E8E8 , #989898); /* Standard syntax */
+  border: none;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  font-family: futura;
+  font-weight: bolder;
+  font-size: 18px;
+  color: black;
+  text-shadow: 0px 0 white, 0 0.5px white, 0.5px 0 white, 0 0px white;
+  border-right: solid 1px #989898;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+  color: white;
+  text-shadow: none;
+}
+
+
+.navbar-brand {
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow: visible;
+  margin-top: -45px;
+  padding-top: 0px;
+}
+
+/* Main Page */
+
+.background {
+  background-color: white;
+  margin-left: 60px;
+  margin-right: 60px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.fantasy {
+  font-family: Abadi MT Condensed Extra Bold;
+  margin-left: 30px;
+  font-size: 36px;
+  margin-top: 17px;
+  margin-bottom: 7px;
+  color: white;
+}
+
+/* News Stories */
+
+.story-ff {
+  color: red;
+  font-family: futura;
+  padding-top: 8px;
+  font-size: 12px;
+  margin-left: 20px;
+}
+
+h2.story-title {
+  padding: 0px;
+  margin-top: -5px;
+  margin-bottom: 0px;
+  margin-left: 20px;
+}
+
+.story-title a{
+  font-family: Abadi MT Condensed Extra Bold;
+  color: black;
+}
+
+.story-title a:hover{
+  text-decoration: none;
+}
+
+a.story-link {
+  font-family: Arial;
+  color: black;
+  font-weight: bold;
+}
+
+a:hover.story-link {
+  text-decoration: none;
+}
+
+.story-description {
+  margin-top: 0px;
+  padding-top: 0px;
+  font-family: sans-serif;
+  border-bottom: solid 1px #989898;
+  padding-bottom: 15px;
+  font-size: 12px;
+  margin-left: 20px;
+}
+
+.story-date {
+  font-family: sans-serif;
+  font-size: 12px;
+  padding: 0px;
+  margin: 7px 0px 5px 0px;
+  margin-left: 20px;
+}
+
+#story-results {
+  margin-right: 13px;
+  margin-left: 13px;
+}
+
+.story {
+  margin-right: 15px;
+}
+
+/* Twitter and Instagram */
+
+h2.twitter, h2.instagram {
+  font-family: Abadi MT Condensed Extra Bold;
+  margin: 10px 15px -10px 15px;
+  font-size: 30px;
+  background-color: #003A73;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  color: white;
+}
+
+div.row.page-header {
+  margin: 0px 15px 10px 15px;
+  border: none;
+  background-color: #003A73;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.profile-image {
+  float: left;
+  padding: 0px 7px 3px 0px;
+}
+
+.name {
+  float: left;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.screen-name {
+  float: left;
+  font-size: 13px;
+  color: #989898;
+}
+
+.tweet {
+  font-size: 12px;
+  padding-left: 55px;
+}
+
+.tweet a{
+  color: #003A73;
+}
+
+div.row.twitter {
+  font-family: sans-serif;
+  font-size: 13px;
+  padding: 10px 10px 10px 10px;
+  margin: 0px;
+}
+
+.twitter-background, .instagram-background {
+  background: -webkit-linear-gradient(#f0f0f0, #D0D0D0 ); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#f0f0f0, #D0D0D0); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#f0f0f0, #D0D0D0); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#f0f0f0, #D0D0D0); /* Standard syntax */
+  margin-right: 15px;
+  margin-left: 15px;
+  border-bottom-left-radius: 5px 5px;
+  border-bottom-right-radius: 5px 5px;
+}
+
+.insta-thumb {
+  width: 45%;
+  height: auto;
+  padding: 5px 5px 5px 0px;
+  padding-left: 3%;
+  overflow: scroll;
+} 
+
+.col-md-8 {
+  padding-right: 0px;
+}
+
+
+
+
+
+

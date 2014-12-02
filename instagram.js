@@ -27,12 +27,11 @@ $(function() {
 			console.log(json);
 			
 			$.each(json.data,function(i,data){
-				html += '<p>Filter:"'+ data.filter+'"</p>';
-				html += '<img src ="' + data.images.low_resolution.url + '">'
+				html += 'div class="insta-pictures">' + '<img src ="' + data.images.low_resolution.url + '">' + '</div>';
 			});
 			
 			console.log(html);
-			$("#results").append(html);
+			$("#insta-results").append(html);
 			
 		}
 		
